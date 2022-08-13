@@ -3,15 +3,17 @@
 Rust Crash Course | Rustlang via Traversy Media
 - https://www.youtube.com/watch?v=zF34dRivLOw
 
-### Rust-lang.org
+### Rust-lang.org Setup
 https://www.rust-lang.org/learn/get-started</br>
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh</br>
 'option 1'</br>
-Then restart the terminal
+Then restart the terminal</br></br>
+
+### Main Rust Language and Commands</br>
 
 * Variables hold primitive data or references to data
 * Variables are immutable by default
-* Rust is a block-scoped language
+* Rust is a block-scoped language</br></br>
 
 ### Rust commands</br>
 * rustup --version
