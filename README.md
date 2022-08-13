@@ -6,6 +6,7 @@ Rust Crash Course | Rustlang via Traversy Media
 ### Rust-lang.org
 https://www.rust-lang.org/learn/get-started</br>
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh</br>
+'option 1'</br>
 Then restart the terminal
 
 ### Rust commands</br>
