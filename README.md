@@ -14,3 +14,9 @@ Then restart the terminal
 - rustup update</br>
 - rustc --version</br>
 - cargo --version</br>
+
+- mkdir rust_sandbox
+- cargo init
+- cargo run
+- cargo build
+- cargo build --release
