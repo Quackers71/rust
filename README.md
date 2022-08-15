@@ -27,6 +27,9 @@ Rust is a statically typed language, which means that it must know the types of 
 variables at compile time. However, the compiler can usually infer what type we want to</br>
 use based on the value and  how we use it.</br></br>
 
+Primitive str = Immutable fixed-length string somewhere in memory</br>
+String = Growable, heap-allocated data structure - Use when you need to modify or own string data</br></br>
+
 ### Rust commands</br>
 * rustup --version
 * rustup update
