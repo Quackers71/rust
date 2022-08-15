@@ -26,4 +26,16 @@ pub fn run() {
     // find max size
     println!("Max i32: {}", std::i32::MAX);
     println!("Max i64: {}", std::i64::MAX);
+
+    // boolean
+    // let is_active = true; // or use
+    let is_active: bool = true;
+
+    // get boolean from expression
+    let is_greater: bool = 10 < 5;
+
+    let a1 = 'a';
+    let face = "\u{1F600}";
+
+    println!("{:?}", (_x, _y, _z, is_active, is_greater, a1, face));
 }
