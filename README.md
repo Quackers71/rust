@@ -14,12 +14,14 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh</br>
 'option 1'</br>
 Then restart the terminal</br></br>
 
-### Main Rust Language and Commands</br>
+### Main Rust Language and Commands</br></br>
 
+### Variables
 Variables hold primitive data or references to data</br>
 Variables are immutable by default</br>
 Rust is a block-scoped language</br></br>
 
+### Data Types
 Primitive Types--</br>
 Integers: u8, i8, u16, i16, u32, i32, u64, i64, u128, i128 (number of bits they take in memory)</br>
 Floats: f32, f64</br>
@@ -32,8 +34,13 @@ Rust is a statically typed language, which means that it must know the types of 
 variables at compile time. However, the compiler can usually infer what type we want to</br>
 use based on the value and  how we use it.</br></br>
 
+### Strings
 Primitive str = Immutable fixed-length string somewhere in memory</br>
 String = Growable, heap-allocated data structure - Use when you need to modify or own string data</br></br>
+
+### Tuples
+Tuples group together values of different types</br>
+Max 12 elements</br></br>
 
 ### Rust commands</br>
 * rustup --version
