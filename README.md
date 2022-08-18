@@ -1,7 +1,12 @@
 # Rust
 
+### Rust Courses
+
 Rust Crash Course | Rustlang via Traversy Media
 - https://www.youtube.com/watch?v=zF34dRivLOw
+
+Rust Fundamentals | PluralSight
+- https://www.pluralsight.com/courses/rust-fundamentals
 
 ### Rust-lang.org Setup
 https://www.rust-lang.org/learn/get-started</br>
