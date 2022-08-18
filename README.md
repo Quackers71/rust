@@ -42,6 +42,9 @@ String = Growable, heap-allocated data structure - Use when you need to modify o
 Tuples group together values of different types</br>
 Max 12 elements</br></br>
 
+### Arrays
+Arrays - Fixed list where elements are the same data types</br></br>
+
 ### Rust commands</br>
 * rustup --version
 * rustup update
