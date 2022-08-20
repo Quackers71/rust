@@ -48,6 +48,9 @@ Arrays - Fixed list where elements are the same data types</br></br>
 ### Vectors
 Vectors - Resizable arrays</br></br>
 
+### Conditionals
+Conditionals - used to check the condition of something and act on the result</br></br>
+
 ### Rust commands</br>
 * rustup --version
 * rustup update
