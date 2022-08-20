@@ -45,6 +45,9 @@ Max 12 elements</br></br>
 ### Arrays
 Arrays - Fixed list where elements are the same data types</br></br>
 
+### Vectors
+Vectors - Resizable arrays</br></br>
+
 ### Rust commands</br>
 * rustup --version
 * rustup update
