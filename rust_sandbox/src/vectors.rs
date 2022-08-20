@@ -36,6 +36,13 @@ pub fn run() {
 
     // loop through vectors values
     for x in numbers.iter() {
-        println!("Number: {}", x);
+        println!("Number {0}: {1}", numbers.len(), x);
     }
+
+    // loop & mutate values
+    for x in numbers.iter_mut() {
+        *x *=2;
+    }
+
+    println!("Numbers Vec: {:?}", numbers);
 }
