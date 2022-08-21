@@ -57,6 +57,14 @@ Loops - used to iterate until a condition is met</br></br>
 ### Functions
 Functions - used to store block of code for re-use</br></br>
 
+### Reference Pointers
+Reference Pointers - Point to a resource in memory</br></br>
+
+With non-primitives, if you assign another variable to a piece of data, the first</br>
+variable will no longer hold that value.  You'll need to use a reference (&) to</br>
+point to the resource...</br></br>
+</br>
+
 ### Rust commands</br>
 * rustup --version
 * rustup update
