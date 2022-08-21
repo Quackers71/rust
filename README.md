@@ -54,6 +54,9 @@ Conditionals - used to check the condition of something and act on the result</b
 ### Loops
 Loops - used to iterate until a condition is met</br></br>
 
+### Functions
+Functions - used to store block of code for re-use</br></br>
+
 ### Rust commands</br>
 * rustup --version
 * rustup update
