@@ -51,6 +51,9 @@ Vectors - Resizable arrays</br></br>
 ### Conditionals
 Conditionals - used to check the condition of something and act on the result</br></br>
 
+### Loops
+Loops - used to iterate until a condition is met</br></br>
+
 ### Rust commands</br>
 * rustup --version
 * rustup update
