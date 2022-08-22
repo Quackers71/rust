@@ -68,7 +68,10 @@ point to the resource...</br></br>
 Structs - used to create custom data types</br></br>
 
 ### Enums
-Enums are types which have a few definite values</br></br></br>
+Enums are types which have a few definite values</br></br>
+
+### Command Line Args
+See the file "cli.rs"</br></br></br>
 
 ### Rust commands</br>
 * rustup --version
