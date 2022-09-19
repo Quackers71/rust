@@ -1,6 +1,6 @@
 body {
     background-color: #222;
-    color: white;
+    color: #0Ca7DB;
 }
 
 .container {
@@ -28,6 +28,7 @@ body {
 }
 
 .container button:hover {
-    background: rgb(36, 36, 36);
+    background: greenyellow;
+    color: black;
     cursor: pointer;
 }
