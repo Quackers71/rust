@@ -5,16 +5,44 @@
 Rust Crash Course | Rustlang via Traversy Media
 - https://www.youtube.com/watch?v=zF34dRivLOw
 
+Building a Rust App with Yew! via Let's Get Rusty
+- https://www.youtube.com/watch?v=KmOeFrwz8BM
+
+#### Commands for Rust App with Yew!
+```
+rustc --version
+rustup target add wasm32-unknown-unknown
+cargo install trunk
+# Output : Installed package `trunk v0.16.0` (executable `trunk`)
+To start the app run :
+trunk serve
+# Then goto localhost:8080
+```
+</br>
 Rust Fundamentals | PluralSight
 - https://www.pluralsight.com/courses/rust-fundamentals
 
 ### Rust-lang.org Setup
-https://www.rust-lang.org/learn/get-started</br>
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh</br>
-'option 1'</br>
+https://www.rust-lang.org/learn/get-started
+```
+- curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+# 'option 1'
+```
 Then restart the terminal</br></br>
 
-### Main Rust Language and Commands</br></br>
+### Main Commands and Rust Language</br></br>
+```
+rustup --version
+rustup update
+rustc --version
+cargo --version
+
+mkdir rust_sandbox
+cargo init
+cargo run
+cargo build
+cargo build --release
+```
 
 ### Variables
 Variables hold primitive data or references to data</br>
@@ -72,15 +100,3 @@ Enums are types which have a few definite values</br></br>
 
 ### Command Line Args
 See the file "cli.rs"</br></br></br>
-
-### Rust commands</br>
-* rustup --version
-* rustup update
-* rustc --version
-* cargo --version</br></br>
-
-* mkdir rust_sandbox
-* cargo init
-* cargo run
-* cargo build
-* cargo build --release</br></br>
