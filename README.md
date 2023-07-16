@@ -8,6 +8,9 @@ Rust Crash Course | Rustlang via Traversy Media
 Building a Rust App with Yew! via Let's Get Rusty
 - https://www.youtube.com/watch?v=KmOeFrwz8BM
 
+Learn Rust Programming - Complete Course 🦀
+- https://youtu.be/BpPEoZW5IiY
+
 #### Commands for Rust App with Yew!
 ```
 rustc --version
