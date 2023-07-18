@@ -1,3 +1,4 @@
+// 5. Shadowing
 // Only modify `assert_eq!` to make the `println!` work(print `42` in terminal)
 pub fn shadow() {
     let x: i32 = 5;
