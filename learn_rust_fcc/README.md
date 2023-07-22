@@ -16,8 +16,8 @@ cargo build --release
 
 ### Binary Numbers Stuff
 
-<img src="./numbers-base10.png" width="500"/><br/><br/>
-<img src="./numbers-base2.png" width="500"/><br/><br/>
-<img src="./numbers-range-8-bit-integers.png" width="500"/><br/><br/>
-<img src="./numbers-range-16-bit-integers.png" width="500"/><br/><br/>
-<img src="numbers-signed-integers.png" width="500"/><br/><br/>
+<img src="./images/numbers-base10.png" width="500"/><br/><br/>
+<img src="./images/numbers-base2.png" width="500"/><br/><br/>
+<img src="./images/numbers-range-8-bit-integers.png" width="500"/><br/><br/>
+<img src="./images/numbers-range-16-bit-integers.png" width="500"/><br/><br/>
+<img src="./images/numbers-signed-integers.png" width="500"/><br/><br/>
