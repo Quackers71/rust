@@ -1,7 +1,7 @@
 // mod fn_call;
-mod shadowing;
+mod numbers;
 
 fn main() {
     // fn_call::define_x();
-    shadowing::shadow();
+    numbers::number();
 }
