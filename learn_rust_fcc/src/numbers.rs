@@ -1,11 +1,22 @@
 // Numbers
 
-// No. 5 - Fix errors and panics to make it work
+
+// No. 6 - Modify `assert!` to make it work
 pub fn number() {
-    let v1 = 251_u16 + 8;
-    let v2 = i16::checked_add(251, 8).unwrap();
-    println!("{},{}",v1,v2); // Output should be '259,259'
- }
+    let v = 1_024 + 0xff + 0o77 + 0b1111_1111; // 1024 + 255 + 63 + 255 = 1597
+    assert!(v == 1597); // not 1579
+
+    println!("Success!");
+}
+
+
+
+// // No. 5 - Fix errors and panics to make it work
+// pub fn number() {
+//     let v1 = 251_u16 + 8;
+//     let v2 = i16::checked_add(251, 8).unwrap();
+//     println!("{},{}",v1,v2); // Output should be '259,259'
+//  }
  
 
 
