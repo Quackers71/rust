@@ -39,6 +39,7 @@ fn type_of<T>(_: &T) -> String {
 ```
 Then run 
 ```
+cd src
 cargo run
 ```
 
