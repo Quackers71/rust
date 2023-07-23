@@ -1,13 +1,22 @@
 // Numbers
 
-
-// No. 6 - Modify `assert!` to make it work
+// No. 8 - Precision Floats
 pub fn number() {
-    let v = 1_024 + 0xff + 0o77 + 0b1111_1111; // 1024 + 255 + 63 + 255 = 1597
-    assert!(v == 1597); // not 1579
-
+    assert!(0.1_f32+0.2_f32==0.3_f32); // 0.1 + 0.2 = 0.300000000000002 (or something similar!?)
+    // assert!(0.1 as f32+0.2 as f32==0.3 as f32); // or you could use this format...
     println!("Success!");
 }
+
+
+
+
+// // No. 6 - Modify `assert!` to make it work
+// pub fn number() {
+//     let v = 1_024 + 0xff + 0o77 + 0b1111_1111; // 1024 + 255 + 63 + 255 = 1597
+//     assert!(v == 1597); // not 1579
+
+//     println!("Success!");
+// }
 
 
 
