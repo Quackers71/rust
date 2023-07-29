@@ -1,7 +1,8 @@
 // mod fn_call;
-mod numbers;
+// mod numbers;
+mod range;
 
 fn main() {
     // fn_call::define_x();
-    numbers::number();
+    range::range();
 }
