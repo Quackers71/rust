@@ -21,7 +21,7 @@ fn main() {
     numbers::number();
 }
 ```
-and make sure the number function is made public i.e.
+and make sure the function (fn) is made public i.e.
 ```
 // Numbers
 // Modify `assert_eq!` to make it work
@@ -37,6 +37,7 @@ fn type_of<T>(_: &T) -> String {
     format!("{}", std::any::type_name::<T>())
 }
 ```
+
 Then run 
 ```
 cd src
@@ -45,15 +46,17 @@ cargo run
 
 ### Binary Numbers Stuff
 
-<img src="./images/numbers-integer-types.png" width="500"/><br/><br/>
-<img src="./images/numbers-base10.png" width="500"/><br/><br/>
-<img src="./images/numbers-base2.png" width="500"/><br/><br/>
-<img src="./images/numbers-range-8-bit-integers.png" width="500"/><br/><br/>
-<img src="./images/numbers-range-16-bit-integers.png" width="500"/><br/><br/>
-<img src="./images/numbers-signed-integers.png" width="500"/><br/><br/>
+<img src="./images/numbers-integer-types.png" width="500"/><br/>
+<img src="./images/numbers-base10.png" width="500"/><br/>
+<img src="./images/numbers-base2.png" width="500"/><br/>
+<img src="./images/numbers-range-8-bit-integers.png" width="500"/><br/>
+<img src="./images/numbers-range-16-bit-integers.png" width="500"/><br/>
+<img src="./images/numbers-signed-integers.png" width="500"/><br/>
+<img src="./images/numbers-integer-ranges.png" width="500"/><br/>
+<img src="./images/numbers-usize-isize.png" width="500"/><br/>
+<img src="./images/numbers-what-is-a-word.png" width="500"/><br/>
+<img src="./images/numbers-unit-of-data.png" width="500"/><br/>
+<img src="./images/numbers-floating-point.png" width="500"/><br/>
 
-<img src="./images/numbers-integer-ranges.png" width="500"/><br/><br/>
-<img src="./images/numbers-usize-isize.png" width="500"/><br/><br/>
-<img src="./images/numbers-what-is-a-word.png" width="500"/><br/><br/>
-<img src="./images/numbers-unit-of-data.png" width="500"/><br/><br/>
-<img src="./images/numbers-floating-point.png" width="500"/><br/><br/>
+https://commons.wikimedia.org/wiki/File:ASCII-Table-wide.svg<br/>
+<img src="./images/numbers-ascii-table.png" width="500"/><br/>

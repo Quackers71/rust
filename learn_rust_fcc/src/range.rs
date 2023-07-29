@@ -1,8 +1,8 @@
 // Numbers
 
-// No. 9 - Range
+// No. 9 - Range (ascii code 97-122)
 pub fn range() {
-    let mut sum = 0;
+    let mut sum: i32 = 0;
     for i in -3..2 {
         sum += i
     }
