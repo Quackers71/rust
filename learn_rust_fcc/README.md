@@ -3,7 +3,7 @@
 ### Learn Rust Programming - freeCodeCamp.org
 
 Learn Rust Programming - Complete Course 🦀
-- https://youtu.be/BpPEoZW5IiY?t=4192 currently at 1:09:52
+- https://youtu.be/BpPEoZW5IiY?t=4680 currently at 1:18:00
 
 ### Main Commands and Rust Language</br></br>
 ```
@@ -57,7 +57,6 @@ cargo run
 <img src="./images/numbers-what-is-a-word.png" width="500"/><br/>
 <img src="./images/numbers-unit-of-data.png" width="500"/><br/>
 <img src="./images/numbers-floating-point.png" width="500"/><br/>
-
 https://commons.wikimedia.org/wiki/File:ASCII-Table-wide.svg<br/>
 <img src="./images/numbers-ascii-table.png" width="500"/><br/>
 
@@ -69,3 +68,9 @@ https://commons.wikimedia.org/wiki/File:ASCII-Table-wide.svg<br/>
 <img src="./images/numbers-logic-gates.png" width="500"/><br/>
 <img src="./images/numbers-bitwise-left-shift.png" width="500"/><br/>
 <img src="./images/numbers-bitwise-right-shift.png" width="500"/><br/>
+
+### Char, Bool and Unit Types
+<img src="./images/basic-types-recap.png" width="500"/><br/>
+
+### Statenents and Expressions
+<img src="./images/statements-and-expressions.png" width="500"/><br/>

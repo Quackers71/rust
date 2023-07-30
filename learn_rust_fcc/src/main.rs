@@ -1,6 +1,6 @@
 
-mod boolean;
+mod unittype2;
 
 fn main() {
-    boolean::bool();
+    unittype2::unit();
 }
