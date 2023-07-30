@@ -1,6 +1,6 @@
 
-mod char;
+mod char2;
 
 fn main() {
-    char::char();
+    char2::specific_char();
 }
