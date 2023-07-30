@@ -1,10 +1,6 @@
-// mod fn_call;
-// mod numbers;
-// mod rangeinc;
 
-mod computations;
+mod char;
 
 fn main() {
-    // fn_call::define_x();
-    computations::comps();
+    char::char();
 }
