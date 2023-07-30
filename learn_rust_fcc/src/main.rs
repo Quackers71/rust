@@ -1,6 +1,6 @@
 
-mod char2;
+mod boolean;
 
 fn main() {
-    char2::specific_char();
+    boolean::bool();
 }
