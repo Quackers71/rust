@@ -40,7 +40,7 @@ fn type_of<T>(_: &T) -> String {
 
 Then run 
 ```
-cd src
+cd src/
 cargo run
 ```
 
@@ -60,3 +60,12 @@ cargo run
 
 https://commons.wikimedia.org/wiki/File:ASCII-Table-wide.svg<br/>
 <img src="./images/numbers-ascii-table.png" width="500"/><br/>
+
+<img src="./images/numbers-boolean-logic.png" width="500"/><br/>
+<img src="./images/numbers-bitwise-operations.png" width="500"/><br/>
+<img src="./images/numbers-bitwise-AND-(&).png" width="500"/><br/>
+<img src="./images/numbers-bitwise-OR-(|).png" width="500"/><br/>
+<img src="./images/numbers-bitwise-XOR-(^).png" width="500"/><br/>
+<img src="./images/numbers-logic-gates.png" width="500"/><br/>
+<img src="./images/numbers-bitwise-left-shift.png" width="500"/><br/>
+<img src="./images/numbers-bitwise-right-shift.png" width="500"/><br/>
