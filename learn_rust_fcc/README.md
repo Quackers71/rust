@@ -72,5 +72,5 @@ https://commons.wikimedia.org/wiki/File:ASCII-Table-wide.svg<br/>
 ### Char, Bool and Unit Types
 <img src="./images/basic-types-recap.png" width="500"/><br/>
 
-### Statenents and Expressions
+### Statements and Expressions
 <img src="./images/statements-and-expressions.png" width="500"/><br/>
