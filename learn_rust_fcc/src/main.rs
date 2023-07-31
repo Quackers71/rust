@@ -1,6 +1,6 @@
 
-mod statementandexpressions;
+mod stmtsandexprsns;
 
 fn main() {
-    statementandexpressions::express();
+    stmtsandexprsns::express();
 }

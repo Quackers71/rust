@@ -3,7 +3,7 @@
 ### Learn Rust Programming - freeCodeCamp.org
 
 Learn Rust Programming - Complete Course 🦀
-- https://youtu.be/BpPEoZW5IiY?t=4680 currently at 1:18:00
+- https://youtu.be/BpPEoZW5IiY?t=4844 currently at 1:20:44
 
 ### Main Commands and Rust Language</br></br>
 ```
