@@ -1,6 +1,6 @@
 
-mod stsandexps3;
+mod function1;
 
 fn main() {
-    stsandexps3::express();
+    function1::func();
 }
