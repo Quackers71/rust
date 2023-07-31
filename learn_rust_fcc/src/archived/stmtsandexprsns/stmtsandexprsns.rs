@@ -6,7 +6,7 @@ pub fn express() {
 
     // let y is a variable assignment and classed as a Statement
     let y: u32 = {
-        // all of the code inside {} is classed as an Expression because it a result and value...
+        // all of the code inside {} is classed as an Expression because there is a result and value...
         let x_squared = x * x;
         let x_cube = x_squared * x;
 
