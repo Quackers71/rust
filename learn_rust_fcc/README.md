@@ -3,7 +3,7 @@
 ### Learn Rust Programming - freeCodeCamp.org
 
 Learn Rust Programming - Complete Course 🦀
-- https://youtu.be/BpPEoZW5IiY?t=4844 currently at 1:20:44
+- https://youtu.be/BpPEoZW5IiY?t=5090 currently at 1:24:50
 
 ### Main Commands and Rust Language</br></br>
 ```
@@ -74,3 +74,6 @@ https://commons.wikimedia.org/wiki/File:ASCII-Table-wide.svg<br/>
 
 ### Statements and Expressions
 <img src="./images/statements-and-expressions.png" width="500"/><br/>
+
+### Functions
+<img src="./images/functions.png" width="500"/><br/>
