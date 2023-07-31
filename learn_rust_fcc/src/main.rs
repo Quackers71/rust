@@ -1,6 +1,6 @@
 
-mod stsandexps1;
+mod stsandexps1alt;
 
 fn main() {
-    stsandexps1::express();
+    stsandexps1alt::express();
 }

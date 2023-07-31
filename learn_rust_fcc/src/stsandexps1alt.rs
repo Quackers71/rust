@@ -3,14 +3,12 @@
 
 // Make it work with two ways
 pub fn express() {
-    let v: i32 = {
-        let mut x: i32 = 1;
-        x += 2; // 3
-        x
+    let v: () = {
+        let mut _x = 1;
+        _x += 2 // 3
     };
  
-    assert_eq!(v, 3);
-    println!("{}", v);
+    assert_eq!(v, ());
  
     println!("Success!");
  }
