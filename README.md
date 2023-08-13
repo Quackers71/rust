@@ -11,6 +11,13 @@ Building a Rust App with Yew! via Let's Get Rusty
 Learn Rust Programming - Complete Course 🦀
 - https://youtu.be/BpPEoZW5IiY
 
+### Online Documentation Links
+- https://doc.rust-lang.org/
+- https://github.com/rust-lang/rustlings/
+- https://77.131.55.43/files/hyperreal/alex/rust/Rust%20for%20Rustaceans_%20Idiomatic%20Programming%20-%20Jon%20Gjengset.pdf
+- https://play.rust-lang.org/?version=stable&mode=debug&edition=2021
+- https://www.youtube.com/channel/UCaYhcUwRBNscFNUKTjgPFiA
+
 #### Commands for Rust App with Yew!
 ```
 rustc --version

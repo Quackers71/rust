@@ -5,6 +5,9 @@
 Learn Rust Programming - Complete Course 🦀
 - https://youtu.be/BpPEoZW5IiY?t=5129 currently at 1:25:29
 
+### Documentation Links
+- https://github.com/3rfaan/courses/tree/main/Rust/rust-by-practice/src
+
 ### Main Commands and Rust Language</br></br>
 ```
 cargo init
