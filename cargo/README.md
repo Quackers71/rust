@@ -47,3 +47,8 @@ cargo build --release
 <span style="color:darkgreen;">
 Compiling in debug mode is the default for development. Compilation time is shorter since the compiler doesn’t do optimizations, but the code will run slower. Release mode takes longer to compile, but the code will run faster.
 </span></br></br>
+
+You can build a project without producing a binary to check for errors using :
+```
+cargo check
+```
