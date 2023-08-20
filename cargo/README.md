@@ -1,5 +1,8 @@
 # Cargo Stuff
 
+### Information
+By default, Rust has a set of items defined in the standard library that it brings into the scope of every program. This set is called the prelude, and you can see everything in it [in the standard library documentation](https://doc.rust-lang.org/std/prelude/index.html).
+
 ### Install Rust and Cargo
 - https://doc.rust-lang.org/cargo/getting-started/installation.html
 
