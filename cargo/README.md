@@ -58,7 +58,7 @@ cargo check
 
 ### Notes
 
-From Programming a Guessing Game (Specically regarding Line 19): <br/><br/>
+From Programming a Guessing Game (Specically regarding Line 19): <br/>
 ```
 let guess: u32 = guess.trim().parse().expect("Please type a number!");
 ```
