@@ -55,3 +55,16 @@ You can build a project without producing a binary to check for errors using :
 ```
 cargo check
 ```
+
+### Notes
+
+From Programming a Guessing Game (Specically regarding Line 19): <br/><br/>
+```
+let guess: u32 = guess.trim().parse().expect("Please type a number!");
+```
+  We create a variable named guess. But wait, doesn’t the program already have a variable named<br/> 
+  guess? It does, but helpfully Rust allows us to shadow the previous value of guess with a new one.<br/> 
+  Shadowing lets us reuse the guess variable name rather than forcing us to create two unique variables,<br/> 
+  such as guess_str and guess, for example. We’ll cover this in more detail in Chapter 3, but for now,<br/> 
+  know that this feature is often used when you want to convert a value from one type to another type.<br/>
+  
