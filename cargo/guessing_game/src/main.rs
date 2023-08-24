@@ -23,7 +23,7 @@ fn main() {
         let guess: i32 = match guess.trim().parse() { //.expect("Please type a number!"); // Example of Shadowing
             Ok(num) => num,
             Err(_) => {
-                eprintln!("Please type a number!");
+                eprintln!("Invalid Input, please type a number!");
                 continue;
             }
         };

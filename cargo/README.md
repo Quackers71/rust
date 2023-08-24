@@ -58,7 +58,7 @@ cargo check
 
 ### Notes
 
-From Programming a Guessing Game (Specically regarding Line 19): <br/>
+From Programming the Guessing Game (Specically regarding Line 19): <br/>
 ```
 let guess: u32 = guess.trim().parse().expect("Please type a number!");
 ```
@@ -68,3 +68,9 @@ let guess: u32 = guess.trim().parse().expect("Please type a number!");
   such as guess_str and guess, for example. We’ll cover this in more detail in Chapter 3, but for now,<br/> 
   know that this feature is often used when you want to convert a value from one type to another type.<br/>
   
+### The Guessing Game Final Release
+
+```
+./target/release/guessing_game
+```
+<img src="./images/guessing_game.png" width="700"/><br/>
