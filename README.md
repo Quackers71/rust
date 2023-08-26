@@ -11,6 +11,12 @@ Building a Rust App with Yew! via Let's Get Rusty
 Learn Rust Programming - Complete Course 🦀
 - https://youtu.be/BpPEoZW5IiY
 
+### Other Rust content YT channels
+
+No Boilerplate - Rust for the impatient > https://youtu.be/br3GIIQeefY?si=gctO03OJLoww24JH<br/>
+Let's get Rusty - All Rust features explained > https://youtu.be/784JWR4oxOI?si=jSpk1ZTIsRa6m9Vq<br/>
+The Dev Method - Rust: Intro and setting up your first project > https://youtu.be/pGh-0cMvH5g?si=tFknUYh0r8udO1NG<br/>
+
 ### Online Documentation Links
 - https://doc.rust-lang.org/
 - https://github.com/rust-lang/rustlings/
@@ -82,6 +88,8 @@ Arrays</br></br>
 
 An unsigned number (u32) contains just zero or positive values, whereas a signed number (i32)<br/> 
 has both positive and negative numbers along with the value zero.</br></br>
+
+<img src="./images/i32_4_everything.png" width="500"/><br/>
 
 Rust is a statically typed language, which means that it must know the types of all</br>
 variables at compile time. However, the compiler can usually infer what type we want to</br>
