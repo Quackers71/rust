@@ -2,6 +2,8 @@
 
 https://doc.rust-lang.org/book/title-page.html
 
+## 1. Getting started
+
 ### Information
 By default, Rust has a set of items defined in the standard library that it brings into the scope of every program. This set is called the prelude, and you can see everything in it [in the standard library documentation](https://doc.rust-lang.org/std/prelude/index.html).
 
@@ -58,6 +60,10 @@ You can build a project without producing a binary to check for errors using :
 cargo check
 ```
 
+## 2. Programming a Guessing Game
+
+https://doc.rust-lang.org/book/ch02-00-guessing-game-tutorial.html
+
 ### Notes
 
 From Programming the Guessing Game (Specically regarding Line 19): <br/>
@@ -72,7 +78,14 @@ let guess: u32 = guess.trim().parse().expect("Please type a number!");
   
 ### The Guessing Game Final Release
 
+https://github.com/Quackers71/rust/blob/main/rust-lang.org/guessing_game/src/main.rs
+
 ```
 ./target/release/guessing_game
 ```
 <img src="./images/guessing_game.png" width="700"/><br/>
+
+## Common Programming Concepts
+
+https://doc.rust-lang.org/book/ch03-00-common-programming-concepts.html
+
