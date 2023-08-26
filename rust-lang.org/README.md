@@ -85,7 +85,9 @@ https://github.com/Quackers71/rust/blob/main/rust-lang.org/guessing_game/src/mai
 ```
 <img src="./images/guessing_game.png" width="700"/><br/>
 
-## Common Programming Concepts
+## 3. Common Programming Concepts
 
 https://doc.rust-lang.org/book/ch03-00-common-programming-concepts.html
+
+Keywords - https://doc.rust-lang.org/book/appendix-01-keywords.html
 
