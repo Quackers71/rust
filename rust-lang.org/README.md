@@ -110,3 +110,13 @@ A scalar type represents a single value. Rust has four primary scalar types: int
 numbers, Booleans, and characters. You may recognize these from other programming languages.<br/>  
 
 Appendix B: Operators and Symbols - https://doc.rust-lang.org/book/appendix-02-operators.html
+
+### Compound Types
+
+Compound types can group multiple values into one type. Rust has two primitive compound types:<br/>
+tuples and arrays.<br/>
+
+The Tuple Type - A tuple is a general way of grouping together a number of values with a variety<br/>
+of types into one compound type. Tuples have a fixed length: once declared, they cannot grow or<br/>
+shrink in size.<br/>
+
