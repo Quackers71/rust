@@ -103,3 +103,10 @@ Here’s an example of a constant declaration:
 const THREE_HOURS_IN_SECONDS: u32 = 60 * 60 * 3;
 ```
 Constant Evaluation - https://doc.rust-lang.org/reference/const_eval.html
+
+### Scalar Types
+
+A scalar type represents a single value. Rust has four primary scalar types: integers, floating-point<br/> 
+numbers, Booleans, and characters. You may recognize these from other programming languages.<br/>  
+
+Appendix B: Operators and Symbols - https://doc.rust-lang.org/book/appendix-02-operators.html
