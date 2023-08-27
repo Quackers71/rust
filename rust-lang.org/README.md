@@ -75,6 +75,13 @@ let guess: u32 = guess.trim().parse().expect("Please type a number!");
   Shadowing lets us reuse the guess variable name rather than forcing us to create two unique variables,<br/> 
   such as guess_str and guess, for example. We’ll cover this in more detail in Chapter 3, but for now,<br/> 
   know that this feature is often used when you want to convert a value from one type to another type.<br/>
+
+An unsigned number (u32) contains just zero or positive values, whereas a signed number (i32)<br/> 
+has both positive and negative numbers along with the value zero.</br></br>
+
+<img src="../images/i32_4_everything.png" width="500"/><br/>
+
+In many cases you could use i32 for everything!
   
 ### The Guessing Game Final Release
 
@@ -91,3 +98,8 @@ https://doc.rust-lang.org/book/ch03-00-common-programming-concepts.html
 
 Keywords - https://doc.rust-lang.org/book/appendix-01-keywords.html
 
+Here’s an example of a constant declaration:
+```
+const THREE_HOURS_IN_SECONDS: u32 = 60 * 60 * 3;
+```
+Constant Evaluation - https://doc.rust-lang.org/reference/const_eval.html
