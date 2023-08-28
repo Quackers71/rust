@@ -95,15 +95,13 @@ fn main() {
               "August", "September", "October", "November", "December"];
 
     eprint!("Please enter an month (1-12) : ");
-    loop {
-        let mut index = String::new();
 
-        io::stdin().read_line(&mut index).expect("Failed to read line");
+    let mut index = String::new();
 
-        let index: usize = index.trim().parse().expect("Index entered was not a number!");
-        let element = months[index - 1];
+    io::stdin().read_line(&mut index).expect("Failed to read line");
     
-        println!("The value of the element at index {index} is : {element}");
-        break;
-    }
+    let index: usize = index.trim().parse().expect("Index entered was not a number!");
+    let element = months[index - 1];
+
+    println!("The value of the element at index {index} is : {element}");
 }
