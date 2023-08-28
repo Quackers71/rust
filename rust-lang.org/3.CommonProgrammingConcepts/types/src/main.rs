@@ -1,10 +1,12 @@
-fn print_type_of<T>(_: &T) {
+use std::io;
+
+/* fn print_type_of<T>(_: &T) {
     println!("{}", std::any::type_name::<T>())
-}
+} */
 
 fn main() {
 
-    /* Scalar Types */
+ /*    /* Scalar Types */
 
     // Integer Types
     let _guess: u32 = "42".parse().expect("Not a number!");
@@ -75,5 +77,33 @@ fn main() {
 
     println!("five_hundred = {five_hundred}");
     println!("six_point_four = {six_point_four}");
-    println!("one = {one}");
+    println!("one = {one}"); */
+
+    // Array Types
+
+    // let a: [i32; 5] = [1, 2, 3, 4, 5];
+
+    /* let first = a[0]; // 1
+    let second = a[1]; // 2
+
+    let b = [3; 5]; // [3,3,3,3,3]
+
+    let months = ["January", "February", "March", "April", "May", "June", "July",
+              "August", "September", "October", "November", "December"]; */
+
+    let months = ["January", "February", "March", "April", "May", "June", "July",
+              "August", "September", "October", "November", "December"];
+
+    eprint!("Please enter an month (1-12) : ");
+    loop {
+        let mut index = String::new();
+
+        io::stdin().read_line(&mut index).expect("Failed to read line");
+
+        let index: usize = index.trim().parse().expect("Index entered was not a number!");
+        let element = months[index - 1];
+    
+        println!("The value of the element at index {index} is : {element}");
+        break;
+    }
 }
