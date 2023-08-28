@@ -1,10 +1,9 @@
-use std::io;
 
 /* fn print_type_of<T>(_: &T) {
     println!("{}", std::any::type_name::<T>())
 } */
 
-fn main() {
+// fn main() {
 
  /*    /* Scalar Types */
 
@@ -90,6 +89,10 @@ fn main() {
 
     let months = ["January", "February", "March", "April", "May", "June", "July",
               "August", "September", "October", "November", "December"]; */
+
+use std::io;
+
+fn main() {
 
     let months = ["January", "February", "March", "April", "May", "June", "July",
               "August", "September", "October", "November", "December"];
