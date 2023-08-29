@@ -120,3 +120,12 @@ The Tuple Type - A tuple is a general way of grouping together a number of value
 of types into one compound type. Tuples have a fixed length: once declared, they cannot grow or<br/>
 shrink in size.<br/>
 
+The Array Type - Another way to have a collection of multiple values is with an array. Unlike a<br/>
+tuple, every element of an array must have the same type. Unlike arrays in some other languages,<br/>
+arrays in Rust have a fixed length.<br/>
+
+### Functions
+
+Functions are prevalent in Rust code. You’ve already seen one of the most important functions in<br/>
+the language: the main function, which is the entry point of many programs. You’ve also seen the<br/> 
+fn keyword, which allows you to declare new functions.<br/>
