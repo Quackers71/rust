@@ -103,7 +103,13 @@ fn main() {
 
     io::stdin().read_line(&mut index).expect("Failed to read line");
     
-    let index: usize = index.trim().parse().expect("Index entered was not a number!");
+    let index: usize = match index.trim().parse() {
+        Ok(n) => n,
+        Err(e) => {
+            println!("Error parsing index: {}", e);
+            return;
+        }
+    };
     let element = months[index - 1];
 
     println!("The value of the element at index {index} is : {element}");
