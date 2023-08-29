@@ -106,7 +106,7 @@ Constant Evaluation - https://doc.rust-lang.org/reference/const_eval.html
 
 ### Scalar Types
 
-A scalar type represents a single value. Rust has four primary scalar types: integers, floating-point<br/> 
+- A scalar type represents a single value. Rust has four primary scalar types: integers, floating-point<br/> 
 numbers, Booleans, and characters. You may recognize these from other programming languages.<br/>  
 
 Appendix B: Operators and Symbols - https://doc.rust-lang.org/book/appendix-02-operators.html
@@ -116,11 +116,11 @@ Appendix B: Operators and Symbols - https://doc.rust-lang.org/book/appendix-02-o
 Compound types can group multiple values into one type. Rust has two primitive compound types:<br/>
 tuples and arrays.<br/>
 
-The Tuple Type - A tuple is a general way of grouping together a number of values with a variety<br/>
+- The Tuple Type - A tuple is a general way of grouping together a number of values with a variety<br/>
 of types into one compound type. Tuples have a fixed length: once declared, they cannot grow or<br/>
 shrink in size.<br/>
 
-The Array Type - Another way to have a collection of multiple values is with an array. Unlike a<br/>
+- The Array Type - Another way to have a collection of multiple values is with an array. Unlike a<br/>
 tuple, every element of an array must have the same type. Unlike arrays in some other languages,<br/>
 arrays in Rust have a fixed length.<br/>
 
@@ -129,3 +129,31 @@ arrays in Rust have a fixed length.<br/>
 Functions are prevalent in Rust code. You’ve already seen one of the most important functions in<br/>
 the language: the main function, which is the entry point of many programs. You’ve also seen the<br/> 
 fn keyword, which allows you to declare new functions.<br/>
+
+- Parameters and Arguments
+
+We can define functions to have parameters, which are special variables that are part of a function’s<br/> 
+signature. When a function has parameters, you can provide it with concrete values for those parameters.<br/> 
+Technically,the concrete values are called arguments, but in casual conversation, people tend to use the<br/> 
+words parameter and argument interchangeably for either the variables in a function’s definition or the<br/> 
+concrete values passed in when you call a function.<br/>
+
+- Statements and Expressions
+
+Function bodies are made up of a series of statements optionally ending in an expression. So far, the<br/> 
+functions we’ve covered haven’t included an ending expression, but you have seen an expression as part<br/>
+of a statement. Because Rust is an expression-based language, this is an important distinction to understand.<br/>
+Other languages don’t have the same distinctions, so let’s look at what statements and expressions are and<br/> 
+how their differences affect the bodies of functions.<br/>
+
+    - Statements are instructions that perform some action and do not return a value.
+    - Expressions evaluate to a resultant value.<br/>
+
+- Functions with Return Values
+
+Functions can return values to the code that calls them. We don’t name return values, but we must declare<br/> 
+their type after an arrow (->). In Rust, the return value of the function is synonymous with the value of<br/> 
+the final expression in the block of the body of a function. You can return early from a function by using<br/> 
+the return keyword and specifying a value, but most functions return the last expression implicitly.<br/>
+
+### Control Flow
