@@ -96,21 +96,29 @@ fn main() {
 
     let months = ["January", "February", "March", "April", "May", "June", "July",
               "August", "September", "October", "November", "December"];
+    loop {
+        eprint!("Please enter an month (1-12) : ");
 
-    eprint!("Please enter an month (1-12) : ");
+        let mut index = String::new();
 
-    let mut index = String::new();
+        io::stdin().read_line(&mut index).expect("Failed to read line");
+        
+        let index: usize = match index.trim().parse() {
+            Ok(n) => n,
+            Err(e) => {
+                println!("Error parsing index: {}", e);
+                continue;
+            }
+        };
 
-    io::stdin().read_line(&mut index).expect("Failed to read line");
-    
-    let index: usize = match index.trim().parse() {
-        Ok(n) => n,
-        Err(e) => {
-            println!("Error parsing index: {}", e);
-            return;
-        }
-    };
-    let element = months[index - 1];
+        let element = if index < 1 || index > 12 {
+            println!("Index out of bounds");
+            continue;
+        } else {
+            months[index - 1]
+        };
 
-    println!("The value of the element at index {index} is : {element}");
+        println!("The value of the element at index {index} is : {element}");
+        break;
+    }
 }
