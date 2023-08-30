@@ -157,3 +157,28 @@ the final expression in the block of the body of a function. You can return earl
 the return keyword and specifying a value, but most functions return the last expression implicitly.<br/>
 
 ### Control Flow
+
+The ability to run some code depending on whether a condition is true and to run some code repeatedly while<br/> 
+a condition is true are basic building blocks in most programming languages. The most common constructs that<br/>
+let you control the flow of execution of Rust code are if expressions and loops.<br/>
+
+- if Expressions 
+
+An if expression allows you to branch your code depending on conditions. You provide a condition and then<br/> 
+state, “If this condition is met, run this block of code. If the condition is not met, do not run this block<br/> 
+of code.”<br/>
+
+- Handling Multiple Conditions with else if
+- Using if in a let Statement
+- Repetition with Loops - loop, while and for.
+- Repeating Code with loop
+- Returning Values from Loops
+- Loop Labels to Disambiguate Between Multiple Loops
+
+If you have loops within loops, break and continue apply to the innermost loop at that point. You can optionally<br/> 
+specify a loop label on a loop that you can then use with break or continue to specify that those keywords apply<br/> 
+to the labeled loop instead of the innermost loop. Loop labels must begin with a single quote.<br/>
+
+- Conditional Loops with while
+- Looping Through a Collection with for
+- more concise using 'for in' and using .rev() - reverse
