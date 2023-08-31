@@ -1,28 +1,32 @@
 fn twelve_days_of_christmas(day: u8) {
-    let gifts = match day {
-        1 => "a partridge in a pear tree",
-        2 => "two turtle doves",
-        3 => "three french hens",
-        4 => "four calling birds",
-        5 => "five gold rings",
-        6 => "six geese a-laying",
-        7 => "seven swans a-swimming",
-        8 => "eight maids a-milking",
-        9 => "nine ladies dancing",
-        10 => "ten lords a-leaping",
-        11 => "eleven pipers piping",
-        12 => "twelve drummers drumming",
-        _ => panic!("Invalid day: {}", day),
-    };
+    let mut gifts = vec![];
+
+    for i in 1..=day {
+        match i {
+            1 => gifts.push("a partridge in a pear tree"),
+            2 => gifts.push("two turtle doves"),
+            3 => gifts.push("three french hens"),
+            4 => gifts.push("four calling birds"),
+            5 => gifts.push("five gold rings"),
+            6 => gifts.push("six geese a-laying"),
+            7 => gifts.push("seven swans a-swimming"),
+            8 => gifts.push("eight maids a-milking"),
+            9 => gifts.push("nine ladies dancing"),
+            10 => gifts.push("ten lords a-leaping"),
+            11 => gifts.push("eleven pipers piping"),
+            12 => gifts.push("twelve drummers drumming"),
+            _ => (),
+        }
+    }
 
     let mut line = format!("On the {} day of Christmas, my true love gave to me:", day);
 
-    for i in 1..(day + 1) {
-        if i == 1 {
-            line.push_str(&gifts);
+    for (i, gift) in gifts.iter().enumerate() {
+        if i == 0 {
+            line.push_str(&gift);
         } else {
             line.push_str(", ");
-            line.push_str(&gifts);
+            line.push_str(&gift);
         }
     }
 
