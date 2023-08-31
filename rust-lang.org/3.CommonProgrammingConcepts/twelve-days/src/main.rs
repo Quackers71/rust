@@ -19,9 +19,23 @@ fn twelve_days_of_christmas(day: u8) {
         }
     }
 
-    let mut line = format!("On the {} day of Christmas, my true love gave to me:", day);
+    let mut line = format!("On the {} day of Christmas my true love gave to me, ", match day {
+        1 => "first",
+        2 => "second",
+        3 => "third",
+        4 => "fourth",
+        5 => "fifth",
+        6 => "sixth",
+        7 => "seventh",
+        8 => "eighth",
+        9 => "ninth",
+        10 => "tenth",
+        11 => "eleventh",
+        12 => "twelfth",
+        _ => "",
+    });
 
-    for (i, gift) in gifts.iter().enumerate() {
+    for (i, gift) in gifts.iter().rev().enumerate() {
         if i == 0 {
             line.push_str(&gift);
         } else {
