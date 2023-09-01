@@ -191,3 +191,12 @@ To practice with the concepts discussed in this chapter, try building programs t
 - Convert temperatures between Fahrenheit and Celsius.
 - Generate the nth Fibonacci number.
 - Print the lyrics to the Christmas carol “The Twelve Days of Christmas,” taking advantage of the repetition in the song.
+
+## 4. Understanding Ownership
+
+### Ownership Rules
+
+- Each value in Rust has an owner.
+- There can only be one owner at a time.
+- When the owner goes out of scope, the value will be dropped.
+
