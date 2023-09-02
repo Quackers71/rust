@@ -196,7 +196,61 @@ To practice with the concepts discussed in this chapter, try building programs t
 
 ### Ownership Rules
 
-- Each value in Rust has an owner.
+- Each value in Rust has a variable that's called its owner.
 - There can only be one owner at a time.
 - When the owner goes out of scope, the value will be dropped.
 
+### Ownership
+
+Ownership is a set of rules that govern how a Rust program manages memory. All programs have to manage the way they<br/>
+use a computer’s memory while running. Some languages have garbage collection that regularly looks for no-longer-used<br/> memory as the program runs; in other languages, the programmer must explicitly allocate and free the memory. Rust uses<br/>
+a third approach: memory is managed through a system of ownership with a set of rules that the compiler checks. If any<br/>
+of the rules are violated, the program won’t compile. None of the features of ownership will slow down your program<br/>
+while it’s running.<br/>
+
+### The Stack and the Heap
+
+Both the stack and the heap are parts of memory available to your code to use at runtime, but they are structured in<br> different ways.<br/>
+
+- The stack stores values in the order it gets them and removes the values in the opposite order.
+
+- The Heap is less organized: when you put data on the heap, you request a certain amount of space.
+
+### Variable Scope - String Literal
+
+String Literal - The variable s refers to a string literal, where the value of the string is hardcoded into the<br/> 
+text of our program. The variable is valid from the point at which it’s declared until the end of the current scope.<br/>
+
+```
+let s = "hello";
+```
+
+### The String Type
+
+Rust has a second string type, String. This type manages data allocated on the heap and as such is able to store<br/> 
+an amount of text that is unknown to us at compile time. You can create a String from a string literal using the<br/> 
+from function, like so:<br/>
+```
+let s = String::from("Hello");
+```
+The double colon :: operator allows us to namespace this particular from function under the String type rather<br/> 
+than using some sort of name like string_from.<br/>
+
+This kind of string can be mutated:
+```
+let mut s = String::from("Hello");
+
+s.push_str(" World!"); // push_str() appends a literal to a String
+
+println!("{}", s); // This will print `Hello World!`
+```
+So, what’s the difference here? Why can String be mutated but literals cannot? The difference is in how these<br/> 
+two types deal with memory.<br/>
+
+### Memory and Allocation
+
+In the case of a string literal, we know the contents at compile time, so the text is hardcoded directly into the<br/> 
+final executable. This is why string literals are fast and efficient. But these properties only come from the string<br/> literal’s immutability. Unfortunately, we can’t put a blob of memory into the binary for each piece of text whose<br/> 
+size is unknown at compile time and whose size might change while running the program.<br/>
+
+Rust takes a different path: the memory is automatically returned once the variable that owns it goes out of scope.<br/>

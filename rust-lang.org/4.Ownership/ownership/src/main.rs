@@ -1,10 +1,9 @@
 fn main() {
-    /* Variable Scope */
-                       // s is not valid here, it’s not yet declared
-    let s = "Hello World";   // s is valid from this point forward
+    /* The String Type */
 
-    // do stuff with s
-                       // this scope is now over, and s is no longer valid
+    let mut s = String::from("Hello");
 
-    println!("{s}");
+    s.push_str(" World!"); // push_str() appends a literal to a String
+
+    println!("{}", s); // This will print `hello, world!`
 }
