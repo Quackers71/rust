@@ -24,6 +24,11 @@ The Dev Method - Rust: Intro and setting up your first project > https://youtu.b
 - https://play.rust-lang.org/?version=stable&mode=debug&edition=2021
 - https://www.youtube.com/channel/UCaYhcUwRBNscFNUKTjgPFiA
 
+### Rust Playground and Practice Stuff
+
+- https://play.rust-lang.org/
+- http://practice.course.rs/variables.html
+
 ### Install Rust and Cargo
 - https://doc.rust-lang.org/cargo/getting-started/installation.html
 
