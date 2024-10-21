@@ -4,9 +4,15 @@
 
 No Boilerplate > https://youtu.be/2hXNd6x9sZs?si=F7k9ERmgH-MRNq0h
 
+<img src="./images/rust_stuff.png" width="300"/><br/>
+
 - The Rust Book > https://doc.rust-lang.org/book/
 - Rust by Example > https://rustbyexample.io/ or https://doc.rust-lang.org/stable/rust-by-example/
 - Rustlings > http://rustlings.cool/ 
+
+<img src="./images/haskell.png" width="300"/><br/>
+
+<img src="./images/learn_haskell.png" width="300"/><br/>
 
 ### Rust Courses
 
