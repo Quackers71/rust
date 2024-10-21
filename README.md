@@ -14,6 +14,9 @@ No Boilerplate > https://youtu.be/2hXNd6x9sZs?si=F7k9ERmgH-MRNq0h
 
 <img src="./images/learn_haskell.png" width="300"/><br/>
 
+- https://learnyouahaskell.com
+- https://i.iinfo.cz/files/root/k/real-world-haskell.pdf
+
 ### Rust Courses
 
 Rust Crash Course | Rustlang via Traversy Media
