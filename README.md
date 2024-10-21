@@ -1,5 +1,13 @@
 # Rust
 
+### How to learn Rust
+
+No Boilerplate > https://youtu.be/2hXNd6x9sZs?si=F7k9ERmgH-MRNq0h
+
+- The Rust Book > https://doc.rust-lang.org/book/
+- Rust by Example > https://rustbyexample.io/ or https://doc.rust-lang.org/stable/rust-by-example/
+- Rustlings > http://rustlings.cool/ 
+
 ### Rust Courses
 
 Rust Crash Course | Rustlang via Traversy Media
