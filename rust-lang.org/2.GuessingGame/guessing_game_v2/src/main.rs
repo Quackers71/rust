@@ -1,5 +1,5 @@
 use std::io;
-use std::cmp::Ordering;
+// use std::cmp::Ordering; // apparently unused
 use rand::Rng;
 
 // The below code was taken from AI and works like the original guessing gane version ;-)
