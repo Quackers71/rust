@@ -86,9 +86,13 @@ cargo --version
 
 mkdir rust_sandbox
 cargo init
-cargo run
+
+cargo check
+
 cargo build
 cargo build --release
+
+cargo run
 ```
 
 ### Core Concepts
