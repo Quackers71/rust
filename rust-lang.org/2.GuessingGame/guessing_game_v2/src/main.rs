@@ -1,5 +1,5 @@
 use std::io;
-// use std::cmp::Ordering; // apparently unused
+use std::cmp::Ordering; // used it
 use rand::Rng;
 
 // The below code was taken from AI and works like the original guessing gane version ;-)
@@ -29,9 +29,9 @@ fn main() {
 
         match guess.cmp(&secret_number)
  {
-            std::cmp::Ordering::Less => println!("Too small!"),
-            std::cmp::Ordering::Greater => println!("Too big!"),
-            std::cmp::Ordering::Equal => {
+            Ordering::Less => println!("Too small!"),
+            Ordering::Greater => println!("Too big!"),
+            Ordering::Equal => {
                 println!("You   
  win in {} guesses!", guess_count);
                 break;
