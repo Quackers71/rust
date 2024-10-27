@@ -4,7 +4,7 @@ use rand::Rng;
 
 fn main() {
     
-    println!("Guess the number!");
+    println!("Guess the number, between 1 & 100!");
 
     let secret_number = rand::thread_rng().gen_range(1..=100);
     // println!("The secret number is: {secret_number}");
@@ -21,7 +21,13 @@ fn main() {
             .expect("Failed to read line");
 
         let guess: i32 = match guess.trim().parse() { //.expect("Please type a number!"); // Example of Shadowing
-            Ok(num) => num,
+            Ok(num) => {
+                if num < 1 || num > 100 {
+                    eprintln!("Please enter a number between 1 and 100.");
+                    continue;
+                }
+                num
+            },
             Err(_) => {
                 eprintln!("Invalid Input, please type a number!");
                 continue;
