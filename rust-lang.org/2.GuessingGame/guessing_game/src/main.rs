@@ -4,7 +4,7 @@ use rand::Rng;
 
 fn main() {
     
-    println!("Guess the number, between 1 & 100!");
+    println!("Please guess the secret number, between 1 & 100!");
     println!("Enter 'q' to quit");
 
     let secret_number = rand::thread_rng().gen_range(1..=100);
@@ -34,6 +34,9 @@ fn main() {
                     count -=1;
                     if count == 0 {
                         println!("You decided to quit the game.");
+                    } else if count == 1 {
+                        println!("You took {count} guess");
+                        println!("But decided to quit the game.");
                     } else {
                         println!("You took {count} guesses");
                         println!("But decided to quit the game.");
@@ -51,8 +54,13 @@ fn main() {
             Ordering::Less => println!("Too low!"),
             Ordering::Greater => println!("Too high!"),
             Ordering::Equal => {
-                println!("You win! the number was {secret_number}");
-                println!("It took you {count} guesses");
+                if count == 1 {
+                    println!("What! You got the secret number in {count} guess...");
+                    println!("Please go and buy a lottery ticket today!");
+                } else {
+                    println!("You win! the number was {secret_number}");
+                    println!("It took you {count} guesses");
+                }
                 break;
             }
         }
