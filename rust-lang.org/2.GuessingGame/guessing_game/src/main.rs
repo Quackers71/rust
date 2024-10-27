@@ -30,10 +30,14 @@ fn main() {
                 num
             },
             Err(_) => {
-                if guess.trim() == "q" {
+                if guess.trim().to_lowercase() == "q" {
                     count -=1;
-                    println!("You took {count} guesses");
-                    println!("But decided to quit game.");
+                    if count == 0 {
+                        println!("You decided to quit the game.");
+                    } else {
+                        println!("You took {count} guesses");
+                        println!("But decided to quit the game.");
+                    }
                     break;
                 } else {
                     eprintln!("Invalid Input, please type a number!");
