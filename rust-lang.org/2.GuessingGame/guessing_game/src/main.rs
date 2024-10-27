@@ -5,6 +5,7 @@ use rand::Rng;
 fn main() {
     
     println!("Guess the number, between 1 & 100!");
+    println!("Enter 'q' to quit");
 
     let secret_number = rand::thread_rng().gen_range(1..=100);
     // println!("The secret number is: {secret_number}");
@@ -29,8 +30,15 @@ fn main() {
                 num
             },
             Err(_) => {
-                eprintln!("Invalid Input, please type a number!");
-                continue;
+                if guess.trim() == "q" {
+                    count -=1;
+                    println!("You took {count} guesses");
+                    println!("But decided to quit game.");
+                    break;
+                } else {
+                    eprintln!("Invalid Input, please type a number!");
+                    continue;
+                }
             }
         };
         println!("You guessed: {guess}");
