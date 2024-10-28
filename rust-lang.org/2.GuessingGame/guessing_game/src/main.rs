@@ -50,7 +50,7 @@ fn main() {
         };
         println!("You guessed: {guess}");
 
-        match guess.cmp(&secret_number) { // match expression with cmp call between guess & secret_number
+        match guess.cmp(&secret_number) { // match expression with cmp call between guess and &secret_number (again a reference)
             Ordering::Less => println!("Too low!"), // Ordering type with enum variants (Less, Greater & Equal)
             Ordering::Greater => println!("Too high!"),
             Ordering::Equal => {
