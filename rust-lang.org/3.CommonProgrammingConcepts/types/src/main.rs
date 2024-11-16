@@ -1,25 +1,41 @@
+use std::io;
 
-/* fn print_type_of<T>(_: &T) {
-    println!("{}", std::any::type_name::<T>())
-} */
+fn main() {
 
-// fn main() {
+    const THREE_HOURS_IN_SECONDS: u32 = 60 * 60 * 3;
 
- /*    /* Scalar Types */
+    let x = 5;
+    let x = x + 1;
 
-    // Integer Types
+    let spaces = "   ";
+
+    let float_x = 2.0; // f64
+    let float_y: f32 = 3.0; // f32
+
+    println!("The value of x is {x}");
+
+    {
+        // Shadowing
+        let x = x *2;
+        println!("The value of x in the inner scope is {x}");
+    }
+
+    println!("The value of x is {x}");
+
+    println!("3 hours in seconds is {}", THREE_HOURS_IN_SECONDS);
+
+    println!("spaces = !{}!", spaces);
+
+    let spaces = spaces.len();
+    println!("spaces character length = {}", spaces);
+
     let _guess: u32 = "42".parse().expect("Not a number!");
-    println!("The no. is {_guess}");
 
-    // Floating-Point Types
-    let x = 2.0; // f64
-    let y: f32 = 3.0; // f32
-    print!("x = {x} and is a type : ");
-    print_type_of(&x);
-    print!("y = {y} and is a type : ");
-    print_type_of(&y);
+    println!("x is {} // default f64", float_x);
+    println!("y is {} // set to f32", float_y);
 
-    // Numeric Operations
+    // Basic Mathematical Operations
+
     // addition
     let sum = 5 + 10;
 
@@ -34,91 +50,94 @@
     let truncated = -5 / 3; // Results in -1
 
     // remainder
-    let remainder = 43 % 5;
+    let remainder = 43 / 5;
 
-    println!("sum        = {sum}");
-    println!("difference = {difference}");
-    println!("product    = {product}");
-    println!("quotient   = {quotient}");
-    println!("truncated  = {truncated}");
-    println!("remainder  = {remainder}");
+    println!("sum = {}",sum);
+    println!("difference = {}", difference);
+    println!("product = {}", product);
+    println!("quotient = {:.5}",quotient); // 5 decimal places
+    println!("truncated = {}",truncated);
+    println!("remainder = {}",remainder);
 
-    // Boolean Type
     let t = true;
     let f: bool = false; // with explicit type annotation
-    println!("t = {t}");
-    println!("f = {f}");
 
-    // The Character Type
+    println!("t = {}", t);
+    println!("f = {}", f);
+
     let c = 'z';
     let z: char = 'ℤ'; // with explicit type annotation
     let heart_eyed_cat = '😻';
 
-    println!("c = {c}");
-    println!("z = {z}");
-    println!("heart_eyed_cat = {heart_eyed_cat}");
+    println!("c = {}", c);
+    println!("z = {}", z);
+    println!("heart eyed cat = {}", heart_eyed_cat);
 
-    /* Compound Types */
+    let mychar = String::from("\u{D7FF}");
+    println!("mychar = {}", mychar);
 
-    // Tuple Type
-    // Tuples have a fixed length: once declared, they cannot grow or shrink in size.
+    // Tuples
 
-    // let tup: (i32, f64, u8) = (500, 6.4, 1);
+    let tup: (i32, f64, u8) = (500, 6.4, 1);
+    let (x1, x2, x3) = tup; // destructuring
 
-    // let tup = (500, 6.4, 1);
-    // let (x, y, z) = tup;
-    // println!("The value of y is: {y}");
+    println!("tup = {}, {}, {}", x1, x2, x3);
 
-    let x: (i32, f64, u8) = (500, 6.4, 1);
-    let five_hundred = x.0;
-    let six_point_four = x.1;
-    let one = x.2;
+    let tp: (i32, f64, u8) = (93800, 33.981, 21);
+    let ninety_three_gees = tp.0;
+    let thirty_three_n_stuff = tp.1;
+    let twenny_one = tp.2;
 
-    println!("five_hundred = {five_hundred}");
-    println!("six_point_four = {six_point_four}");
-    println!("one = {one}"); */
+    println!("tp.0: i32 = {}", ninety_three_gees);
+    println!("tp.1: f64 = {}", thirty_three_n_stuff);
+    println!("tp.2: u8 = {}", twenny_one);
 
-    // Array Types
+    /*
+    This program creates the tuple x and then accesses each element of the tuple using their respective indices. As with most programming languages, the first index in a tuple is 0.
 
-    // let a: [i32; 5] = [1, 2, 3, 4, 5];
+    The tuple without any values has a special name, unit. This value and its corresponding type are both written () and represent an empty value or an empty return type. Expressions implicitly return the unit value if they don’t return any other value.
+    */
 
-    /* let first = a[0]; // 1
-    let second = a[1]; // 2
+    // Arrays
 
-    let b = [3; 5]; // [3,3,3,3,3]
-
-    let months = ["January", "February", "March", "April", "May", "June", "July",
-              "August", "September", "October", "November", "December"]; */
-
-use std::io;
-
-fn main() {
+    // let a = [1, 2, 3, 4, 5];
 
     let months = ["January", "February", "March", "April", "May", "June", "July",
               "August", "September", "October", "November", "December"];
-    loop {
-        eprint!("Please enter an month (1-12) : ");
+    println!("a = {:?}", months);
 
-        let mut index = String::new();
+    let a: [i32; 5] = [1, 2, 3, 4, 5];
+    println!("a = {:?}", a);
 
-        io::stdin().read_line(&mut index).expect("Failed to read line");
-        
-        let index: usize = match index.trim().parse() {
-            Ok(n) => n,
-            Err(e) => {
-                println!("Error parsing index: {}", e);
-                continue;
-            }
-        };
+    let a = [3; 5];
+    println!("a = {:?}", a);
 
-        let element = if index < 1 || index > 12 {
-            println!("Index out of bounds");
-            continue;
-        } else {
-            months[index - 1]
-        };
+    let a = [1, 2, 3, 4, 5];
 
-        println!("The value of the element at index {index} is : {element}");
-        break;
-    }
+    let first = a[0];
+    let second = a[1];
+
+    println!("a[0] = {}", first);
+    println!("a[1] = {}", second);
+
+    // access element array
+
+    let a = [1, 2, 3, 4, 5];
+    println!("Please enter an array index.");
+
+    let mut index = String::new();
+
+    io::stdin()
+        .read_line(&mut index)
+        .expect("Failed to read line");
+
+    let index: usize = index
+        .trim()
+        .parse()
+        .expect("Index entered was not a number");
+
+    let element = a[index];
+
+    println!("The value of the element at index {index} is: {element}");
+
 }
