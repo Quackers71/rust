@@ -1,3 +1,9 @@
+mod arrays;
+
 fn main() {
-    println!("Hello, Rust!");
+    let a = 10;
+    let b = 15;
+    println!("Hello, Rust!, a= {} & b= {}", a, b);
+
+    arrays::array();
 }
