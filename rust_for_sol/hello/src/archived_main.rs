@@ -1,20 +1,22 @@
-/* let a = 10;
-    let b = 15;
-    println!("Hello, Rust!, a= {} & b= {}", a, b); */
+fn main() {
 
-    /* tuples::tuple();
-    
-    let num = 10;
-    println!("your number {} is {}", num, even::is_even(num)); */
+    /* let a = 10;
+        let b = 15;
+        println!("Hello, Rust!, a= {} & b= {}", a, b); */
 
-   //  muts::muta();
+        /* tuples::tuple();
+        
+        let num = 10;
+        println!("your number {} is {}", num, even::is_even(num)); */
 
-   // arrays::borrowing_slice();
+    //  muts::muta();
 
-/*    let arr = [0, 1, 2, 3]; // length
-   let slice = &arr[1 .. 3]; // [1, 2] don't know the length
+    // arrays::borrowing_slice();
 
-   arrays::borrowing_slice(arr, slice); */
+    /*    let arr = [0, 1, 2, 3]; // length
+    let slice = &arr[1 .. 3]; // [1, 2] don't know the length
+
+    arrays::borrowing_slice(arr, slice); */
 
    let str: &str = "Hello Rust!";
    let mut string: String = String::from("Hello Rust");
@@ -28,3 +30,33 @@
    string = string.replace("Hello", "Bye");
 
    println!("{}", string);
+
+   // if, else if, else
+   let n = 3;
+   println!("The number is {}", n);
+   if n > 0 {
+       println!("which is greater than 0");
+   } else if n < 0 {
+       println!("which is less than 0");
+   } else {
+       println!("which is 0");
+   }
+
+   // for loop
+   println!("for loop 1..6");
+   for i in 1..6 {
+       println!("{},", i);
+   }
+
+   // while loop
+   println!("while loop - starts at 1 and < 6 with a break at 4");
+   let mut l = 1;
+   while l < 6 {
+       println!("{}", l);
+       l += 1;
+       if l == 4 {
+           println!("exit");
+           break
+       }
+   }
+}
