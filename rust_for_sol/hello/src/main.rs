@@ -1,6 +1,7 @@
 // mod tuples;
 // mod even;
-mod muts;
+// mod muts;
+mod arrays;
 
 fn main() {
     /* let a = 10;
@@ -12,5 +13,12 @@ fn main() {
     let num = 10;
     println!("your number {} is {}", num, even::is_even(num)); */
 
-    muts::muta();
+   //  muts::muta();
+
+   // arrays::borrowing_slice();
+
+   let arr = [0, 1, 2, 3]; // length
+   let slice = &arr[1 .. 3]; // [1, 2] don't know the length
+
+   arrays::borrowing_slice(arr, slice);
 }

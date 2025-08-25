@@ -1,8 +1,6 @@
-pub fn array() {
-    let arr: [u8; 3] = [1, 2, 3];
-    let other_arr: [u8; 5] = [100; 5];
-
-    println!("index: {}, length: {}", arr[0], other_arr.len());
-
-    println!("{:?}", other_arr);
+pub fn borrowing_slice(arr: [u8; 4], slice: &[u8]) {
+    println!("{:?}", arr);
+    println!("{:?}", slice);
+    println!("length: {}", slice.len());
+    println!("{} {}", slice[0], slice[1]);
 }
