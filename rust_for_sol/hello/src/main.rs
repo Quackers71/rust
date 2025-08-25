@@ -1,7 +1,7 @@
 // mod arrays;
 
 fn main() {
-    let name = String::from("Peregrine Falcon"); // define the name ("Raven") and type String
+    let name = String::from("Peregrine Falcon"); // define the name ("Peregrine Falcon") and type String
     let bird =  Bird {name, attack: 10}; // create instance of your struct = Struct Type {define types for all fields}
     bird.print_details(); // call the instance and method form the struct
 }
