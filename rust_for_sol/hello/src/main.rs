@@ -1,26 +1,10 @@
-// mod arrays;
+// vectors - dynamic arrays
 
 fn main() {
-    let a: MyEnum = MyEnum::A;
-    let b: MyEnum = MyEnum::B(5); 
-    let c: MyEnum = MyEnum::C{x:10, y:20}; 
-    println!("{:?}", a);
-    println!("{:?}", b);
-    println!("{:?}", c);
-    
-    if let MyEnum::B(val) = b {
-        println!("{}", val);
-    }
-
-    if let MyEnum::C{x, y} = c {
-        println!("{} {}",x, y);
-    }
-}
-
-// enums are objects that represent a certain value
-#[derive(Debug)]
-enum MyEnum {
-    A,
-    B(i32),
-    C {x: i32, y: i32}
+    let mut vec: Vec<i64> = vec![1,2,3,4,5];
+    vec.len();
+    vec[0];
+    vec.push(6);
+    vec.remove(0);
+    println!("{:?}", vec);
 }
