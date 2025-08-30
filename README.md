@@ -33,6 +33,7 @@ Learn Rust Programming - Complete Course 🦀
 No Boilerplate - Rust for the impatient > https://youtu.be/br3GIIQeefY?si=gctO03OJLoww24JH<br/>
 Let's get Rusty - All Rust features explained > https://youtu.be/784JWR4oxOI?si=jSpk1ZTIsRa6m9Vq<br/>
 The Dev Method - Rust: Intro and setting up your first project > https://youtu.be/pGh-0cMvH5g?si=tFknUYh0r8udO1NG<br/>
+Rust Crash Course Tutorial for Solana > https://youtu.be/-AAtfPHEMbA?si=LCheuHsEm-Zng-uQ<br/>
 
 ### Online Documentation Links
 - https://doc.rust-lang.org/
