@@ -59,6 +59,12 @@ Your transaction signature Z4B32v46DeZpYUqVyzq7M2E5dr7ehW9RjT6E98bHfPwN6Mxe3JKZQ
 ✨  Done in 1.78s.
 ```
 
+- To reclaim the SOL allocated to a program account, you can close your Solana program.<br/>
+To close a program, use the solana program close <PROGRAM_ID> command. For example:
+```
+solana program close 3ynNB373Q3VAzKp7m4x238po36hjAGFXFJB4ybN2iTyg --bypass-warning
+```
+
 #### other stuff to look into later on...
 
 Setting up AI Tooling for Solana development<br/>
