@@ -4,7 +4,7 @@
 - https://solana.com/docs
 - https://solana.com/docs/intro/installation
 
-#### From the installation documentation make sure you install :
+From the installation documentation make sure you install :
 
 ```
 nvm
@@ -18,7 +18,7 @@ anchor
 yarn
 ```
 
-#### Useful commands for Solana
+- Useful commands for Solana
 ```
 $ sudo $(command -v solana-sys-tuner) --user $(whoami) > sys-tuner.log 2>&1
 
@@ -34,7 +34,7 @@ $ solana balance <address>
 $ solana airdrop <amt> <address>
 ```
 
-#### Anchor stuff
+- Anchor stuff
 ```
 $ anchor init my-1st-project
 $ cd my-1st-project
@@ -64,6 +64,6 @@ Your transaction signature Z4B32v46DeZpYUqVyzq7M2E5dr7ehW9RjT6E98bHfPwN6Mxe3JKZQ
 Setting up AI Tooling for Solana development<br/>
 This section details optional AI tooling setup you can use to accelerate your Solana development.<br/>
 
-MCP server that you can connect to with cursor to improve Solana AI assisted development. https://mcp.solana.com/<br/>
-LLM.txt optimized documentation that you can use to train LLMs on Solana docs. https://solana.com/llms.txt<br/>
+- MCP server that you can connect to with cursor to improve Solana AI assisted development. https://mcp.solana.com/<br/>
+- LLM.txt optimized documentation that you can use to train LLMs on Solana docs. https://solana.com/llms.txt<br/>
 
