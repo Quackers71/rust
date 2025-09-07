@@ -40,7 +40,23 @@ $ anchor init my-1st-project
 $ cd my-1st-project
 $ anchor build
 $ anchor deploy
-$ anchor test
+```
+
+- Anchor Test
+```
+$ anchor test --skip-local-validator
+```
+
+- Output
+```
+  my-1st-project
+Your transaction signature Z4B32v46DeZpYUqVyzq7M2E5dr7ehW9RjT6E98bHfPwN6Mxe3JKZQTQSQDPH4gYXPtmVw77jFpSNJaKuoDnjSUE
+    ✔ Is initialized! (378ms)
+
+
+  1 passing (379ms)
+
+✨  Done in 1.78s.
 ```
 
 #### other stuff to look into later on...
