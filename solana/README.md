@@ -34,7 +34,7 @@ $ solana balance <address>
 $ solana airdrop <amt> <address>
 ```
 
-- Anchor stuff
+## Anchor stuff
 ```
 $ anchor init my-1st-project
 $ cd my-1st-project
@@ -65,7 +65,23 @@ To close a program, use the solana program close <PROGRAM_ID> command. For examp
 solana program close 3ynNB373Q3VAzKp7m4x238po36hjAGFXFJB4ybN2iTyg --bypass-warning
 ```
 
-#### other stuff to look into later on...
+## Solana - Getting Started
+
+- https://solana.com/docs/intro/quick-start
+- Solana Playground > https://beta.solpg.io
+- Solana Explorer (Beta) > https://explorer.solana.com/address/FGeUws71meAJHbRyFiN2GC9E6N8Jfs3sh5HNjBnYjbBZ?cluster=devnet
+- https://faucet.solana.com
+
+### You'll learn
+
+- Solana Accounts: Learn how the Solana network stores data.
+- Sending Transactions: Learn to interact with the Solana network by sending transactions.
+- Building and Deploying Programs: Create your first Solana program and deploy it to the network.
+- Program Derived Addresses (PDAs): Learn how to use PDAs to create deterministic addresses for accounts.
+- Cross-Program Invocations (CPIs): Learn how to call other programs from within your program, enabling complex<br/> 
+  interactions and  composability between different programs on Solana.
+
+## other stuff to look into later on...
 
 Setting up AI Tooling for Solana development<br/>
 This section details optional AI tooling setup you can use to accelerate your Solana development.<br/>
