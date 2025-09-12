@@ -81,6 +81,21 @@ solana program close 3ynNB373Q3VAzKp7m4x238po36hjAGFXFJB4ybN2iTyg --bypass-warni
 - Cross-Program Invocations (CPIs): Learn how to call other programs from within your program, enabling complex<br/> 
   interactions and  composability between different programs on Solana.
 
+## Solana Developer Bootcamp 2024 - Projects 1-9
+
+- Solana Developer Bootcamp 2024 - Learn Blockchain and Full Stack Web3 Development - Projects 1-9
+  - https://youtu.be/amAq-WHAFs8?si=rXVFGr9ORutOapdY via Solana YT Channel
+
+- Project 1 | Building a Favorites Program
+
+<img src="./images/Solana-playground-project1-Favorites-program.png" width="700"/><br/>
+
+<img src="./images/Solana-playground-project1-Favorites-program-transaction-output.png" width="700"/><br/>
+
+<img src="./images/Solana-playground-project1-Favorites-program-Fetched-data.png" width="700"/><br/>
+
+<br/>
+
 ## other stuff to look into later on...
 
 Setting up AI Tooling for Solana development<br/>
