@@ -86,13 +86,17 @@ solana program close 3ynNB373Q3VAzKp7m4x238po36hjAGFXFJB4ybN2iTyg --bypass-warni
 - Solana Developer Bootcamp 2024 - Learn Blockchain and Full Stack Web3 Development - Projects 1-9
   - https://youtu.be/amAq-WHAFs8?si=rXVFGr9ORutOapdY via Solana YT Channel
 
-- Project 1 | Building a Favorites Program
-
-<img src="./images/Solana-playground-project1-Favorites-program.png" width="700"/><br/>
-
-<img src="./images/Solana-playground-project1-Favorites-program-transaction-output.png" width="700"/><br/>
-
-<img src="./images/Solana-playground-project1-Favorites-program-Fetched-data.png" width="700"/><br/>
+(0:00:00) | Welcome to the Bootcamp<br/>
+(0:03:06) | Blockchain Basics<br/>
+(0:10:22) | Project 1 | Building a Favorites Program<br/>
+(0:37:42) | Project 2 | Creating a Voting Application<br/>
+(1:50:32) | Project 3 | Integrating Blinks and Actions<br/>
+(2:31:45) | Project 4 | Building a CRUD Application<br/>
+(3:34:51) | Project 5 | Creating a Token<br/>
+(3:49:12) | Project 6 | Creating a NFT<br/>
+(4:25:22) | Project 7 | Building a Swap Program<br/>
+(5:48:15) | Project 8 | Creating a Token Vesting App<br/>
+(8:31:17) | Project 9 | Building a Token Lottery<br/>
 
 <br/>
 
