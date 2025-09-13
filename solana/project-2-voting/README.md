@@ -13,19 +13,28 @@ cd voting-dapp
 ```
 npm run dev
 ```
-<img src="./images/project-2-voting-dapp-nodejs.png" width="700"><br/>
+<br/><img src="./images/project-2-voting-dapp-nodejs.png" width="700"><br/>
 
 - Votingdapp Homepage UI via http://localhost:3000<br/>
-<img src="./images/project-2-voting-dapp-frontend-home-ui.png" width="700"/><br/>
+<br/><img src="./images/project-2-voting-dapp-frontend-home-ui.png" width="700"/><br/>
 
 - Solana Test Validator (validated via http://127.0.0.1:8899)
 ```
 solana-test-validator
 ```
-<img src="./images/project-2-voting-solana-test-validator.png" width="700"/><br/>
+<br/><img src="./images/project-2-voting-solana-test-validator.png" width="700"/><br/>
 
 - Install the Phantom wallet & setup a new account
 - Change the configuration to Solana > Developer Settings > Solana Localnet
 
 - Votingdapp Account UI via http://localhost:3000/account/5Q2XJX27tw312nCixSmf8AfPv6ijASqxafodHfWhPQrH<br/>
-<img src="./images/project-2-voting-dapp-frontend-account-ui.png" width="700"/><br/>
+<br/><img src="./images/project-2-voting-dapp-frontend-account-ui.png" width="700"/><br/>
+
+- Voting Dapp Structure
+<br/><img src="./images/project-2-voting-dapp-structure.png" width="700"/><br/>
+
+- Make changes and Anchor Build
+```
+cd solana/project-2-voting/voting-dapp/anchor/
+anchor build
+```
