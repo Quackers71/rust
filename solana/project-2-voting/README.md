@@ -38,3 +38,12 @@ solana-test-validator
 cd solana/project-2-voting/voting-dapp/anchor/
 anchor build
 ```
+
+<br/>Output from Anchor Build
+```
+warning: `voting` (lib) generated 11 warnings (5 duplicates)
+    Finished `release` profile [optimized] target(s) in 1.22s
+   Compiling voting v0.1.0 (/Users/robq/repos/rust/solana/project-2-voting/voting-dapp/anchor/programs/voting)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 1.43s
+     Running unittests src/lib.rs (/Users/robq/repos/rust/solana/project-2-voting/voting-dapp/anchor/target/debug/deps/voting-6d84153f12de5567)
+```

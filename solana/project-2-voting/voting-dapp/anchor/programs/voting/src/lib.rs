@@ -1,40 +1,43 @@
-#![allow(clippy::result_large_err)]
+#![allow(clippy::result_large_err)] // ???
 
-use anchor_lang::prelude::*;
+use anchor_lang::prelude::*; // imports all the good stuff!
 
-declare_id!("JAVuBXeBZqXNtS73azhBDAoYaaAFfo4gWXoZe2e7Jf8H"); 
+declare_id!("JAVuBXeBZqXNtS73azhBDAoYaaAFfo4gWXoZe2e7Jf8H"); // program id = an address
 
-#[program]
+#[program] // program macro
+    // Rust module
 pub mod voting {
-    use super::*;
-
-    pub fn initialize_poll(ctx: Context<InitializePoll>, _poll_id: u64) -> Result<()> {
+    use super::*; // uses the imported stuff!
+    // init poll function
+    pub fn initialize_poll(_ctx: Context<InitializePoll>, poll_id: u64) -> Result<()> {
         Ok(())
     }
 }
 
-#[derive(Accounts)]
-#[instruction(poll_id: u64)]
+#[derive(Accounts)] // derive Accounts macro 
+#[instruction(poll_id: u64)] // instruction macro used for the PDA (seeds) below
+    // Init Poll struct using lifetimes i.e. <'info>
 pub struct InitializePoll<'info> {
-    #[account(mut)]
+    #[account(mut)] // make it mutable (so it can be changed)
     pub signer: Signer<'info>,
     #[account(
-        init,
-        payer = signer,
-        space = 8 + Poll::INIT_SPACE,
-        seeds = [poll_id.to_le_bytes().as_ref()],
-        bump,
+        init, // To create the account if required
+        payer = signer, // payer is the signer
+        space = 8 + Poll::INIT_SPACE, // 8 bytes (reserved) +  Poll::[#dervice(InitSpace)] below, sets how much space is required
+        seeds = [poll_id.to_le_bytes().as_ref()], // seeds = program derived address (PDA), poll_id is required to tie it to the account
+        bump, // Used to calculate the seeds...
     )]
     pub poll: Account<'info, Poll>,
 
-    pub system_program: Program<'info, System>,
+    pub system_program: Program<'info, System>, // System Program = Token Program // this is required for the account macro
 }
 
-#[account]
-#[derive(InitSpace)]
+#[account] // uses the account macro
+#[derive(InitSpace)] // derive macro which gives all instances of Poll the total space of all the items within the struct
+    // The Poll struct is used to group the related data together
 pub struct Poll {
     pub poll_id: u64,
-    #[max_len(280)]
+    #[max_len(280)] // max_len macro to set the length of the String
     pub description: String,
     pub poll_start: u64,
     pub poll_end: u64,
