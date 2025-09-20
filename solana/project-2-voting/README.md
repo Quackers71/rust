@@ -53,9 +53,16 @@ warning: `voting` (lib) generated 11 warnings (5 duplicates)
 - Testing your Smart Contract
 - https://github.com/kevinheavey/anchor-bankrun/tree/main - you can install using :
 ```
-yarn add anchor-bankrun < worked for me
+yarn add anchor-bankrun
 
 #or
 
-npm install anchor-bankrun
+npm install anchor-bankrun --force < --force required
+```
+
+- Run the test :
+```
+anchor test --skip-local-validator --skip-deploy
+
+# Need fix this stuff...
 ```
