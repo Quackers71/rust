@@ -1,5 +1,5 @@
 import * as anchor from '@coral-xyz/anchor'
-import { Program } from '@coral-xyz/anchor'
+import { BN, Program } from '@coral-xyz/anchor'
 import { PublicKey } from '@solana/web3.js'
 import { Voting } from '../target/types/voting';
 import { startAnchor } from 'solana-bankrun';
