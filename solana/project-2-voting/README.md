@@ -107,46 +107,9 @@ Running test suite: "/Users/robq/repos/rust/solana/project-2-voting/voting-dapp/
       at Object.<anonymous> (node_modules/solana-bankrun/solana-bankrun/index.ts:1:1)
       at Object.<anonymous> (anchor/tests/basic.test.ts:5:1)
 
- FAIL  tests/counter.spec.ts
-  ● Test suite failed to run
-
-    Your test suite must contain at least one test.
-
-      at onResult (node_modules/@jest/core/build/index.js:1056:18)
-      at node_modules/@jest/core/build/index.js:1126:165
-      at node_modules/emittery/index.js:363:13
-          at Array.map (<anonymous>)
-      at Emittery.emit (node_modules/emittery/index.js:361:23)
-
-Test Suites: 2 failed, 2 total
+Test Suites: 1 failed, 1 total
 Tests:       0 total
 Snapshots:   0 total
-Time:        0.618 s
+Time:        0.284 s
 Ran all test suites.
-▶ basic
-  ✖ should run the program (26.98175ms)
-✖ basic (27.485291ms)
-ℹ tests 1
-ℹ suites 1
-ℹ pass 0
-ℹ fail 1
-ℹ cancelled 0
-ℹ skipped 0
-ℹ todo 0
-ℹ duration_ms 61.705042
-
-✖ failing tests:
-
-test at tests/counter.spec.ts:42:24
-✖ should run the program (26.98175ms)
-  [SendTransactionError: Simulation failed. 
-  Message: Transaction simulation failed: Attempt to load a program that does not exist. 
-  Logs: 
-  []. 
-  Catch the `SendTransactionError` and call `getLogs()` on it for full details.] {
-    signature: '',
-    transactionMessage: 'Transaction simulation failed: Attempt to load a program that does not exist',
-    transactionLogs: [],
-    programErrorStack: ProgramErrorStack { stack: [] }
-  }
 ```
