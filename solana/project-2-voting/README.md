@@ -75,6 +75,11 @@ anchor test --skip-local-validator --skip-deploy
      Running unittests src/lib.rs (/Users/robq/repos/rust/solana/project-2-voting/voting-dapp/anchor/target/debug/deps/voting-6d84153f12de5567)
 ```
 
+- Ran to Fix the anchor test missing module :
+```
+npm install --save-dev solana-bankrun jest
+```
+
 - Re-ran anchor test - Output (Still need to fix this stuff!)
 ```
 anchor % anchor test --skip-local-validator --skip-deploy
@@ -84,32 +89,57 @@ Found a 'test' script in the Anchor.toml. Running it as a test suite!
 
 Running test suite: "/Users/robq/repos/rust/solana/project-2-voting/voting-dapp/anchor/Anchor.toml"
 
- FAIL  tests/basic.test.ts
+
+ RUNS  tests/basic.test.ts
+[2025-09-21T10:54:35.676951000Z INFO  solana_program_test] "voting" SBF program from target/deploy/voting.so, modified 2 hours, 26 minutes, 48 seconds, 750 ms, 783 µs and 462 ns ago
+ FAIL  tests/basic.test.ts9000Z INFO  solana_program_test] "voting" SBF program from target/deploy/voting.so, modified 2 hours, 26 minutes, 48 seconds
   ● Test suite failed to run
 
-    Cannot find module 'solana-bankrun-darwin-arm64' from 'node_modules/solana-bankrun/dist/internal.js'
+    Your test suite must contain at least one test.
 
-    Require stack:
-      node_modules/solana-bankrun/dist/internal.js
-      node_modules/solana-bankrun/dist/index.js
-      anchor/tests/basic.test.ts
-
-      3 | import { PublicKey } from '@solana/web3.js'
-      4 | import { Voting } from '../target/types/voting';
-    > 5 | import { startAnchor } from 'solana-bankrun';
-        | ^
-      6 | import { describe, it } from 'node:test';
-      7 | import { BankrunProvider } from "anchor-bankrun";
-      8 |
-
-      at Resolver._throwModNotFoundError (node_modules/jest-resolve/build/index.js:863:11)
-      at Object.<anonymous> (node_modules/solana-bankrun/solana-bankrun/internal.js:141:29)
-      at Object.<anonymous> (node_modules/solana-bankrun/solana-bankrun/index.ts:1:1)
-      at Object.<anonymous> (anchor/tests/basic.test.ts:5:1)
+      at onResult (node_modules/@jest/core/build/index.js:1056:18)
+      at node_modules/@jest/core/build/index.js:1126:165
+      at node_modules/emittery/index.js:363:13
+          at Array.map (<anonymous>)
+      at Emittery.emit (node_modules/emittery/index.js:361:23)
 
 Test Suites: 1 failed, 1 total
 Tests:       0 total
 Snapshots:   0 total
-Time:        0.284 s
+Time:        0.551 s
 Ran all test suites.
+[2025-09-21T10:54:35.693157000Z INFO  solana_program_test] Overriding account at JAVuBXeBZqXNtS73azhBDAoYaaAFfo4gWXoZe2e7Jf8H
+[2025-09-21T10:54:35.713289000Z DEBUG solana_runtime::message_processor::stable_log] Program JAVuBXeBZqXNtS73azhBDAoYaaAFfo4gWXoZe2e7Jf8H invoke [1]
+[2025-09-21T10:54:35.713375000Z DEBUG solana_runtime::message_processor::stable_log] Program log: Instruction: InitializePoll
+[2025-09-21T10:54:35.713464000Z DEBUG solana_runtime::message_processor::stable_log] Program 11111111111111111111111111111111 invoke [2]
+[2025-09-21T10:54:35.713480000Z DEBUG solana_runtime::message_processor::stable_log] Program 11111111111111111111111111111111 success
+[2025-09-21T10:54:35.713510000Z DEBUG solana_runtime::message_processor::stable_log] Program JAVuBXeBZqXNtS73azhBDAoYaaAFfo4gWXoZe2e7Jf8H consumed 7612 of 200000 compute units
+[2025-09-21T10:54:35.713516000Z DEBUG solana_runtime::message_processor::stable_log] Program JAVuBXeBZqXNtS73azhBDAoYaaAFfo4gWXoZe2e7Jf8H success
+
+  ●  Cannot log after tests are done. Did you forget to wait for something async in your test?
+    Attempted to log "{
+      pollId: <BN: 1>,
+      description: 'What is your favorite type of Peanut Butter?',
+      pollStart: <BN: 0>,
+      pollEnd: <BN: 7be1d1b3>,
+      candidateAmount: <BN: 0>
+    }".
+
+    
+
+      at console.log (node_modules/@jest/console/build/index.js:311:10)
+      at TestContext.<anonymous> (anchor/tests/basic.test.ts:54:17)
+          at async Promise.all (index 0)
+
+▶ Voting
+  ✔ Initialize Poll (41.332084ms)
+✔ Voting (41.838666ms)
+ℹ tests 1
+ℹ suites 1
+ℹ pass 1
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 73.6055
 ```
