@@ -4,6 +4,8 @@ use std::io::Write;
 use std::fs::OpenOptions;
 use std::io::Result; // Use io::Result for easier error handling in main
 
+const JOURNAL_FILE: &str = "journal.log";
+
 fn main() {
 
     let _ = create_journal();
@@ -19,6 +21,7 @@ fn main() {
             .expect("Error reading the input.");
 
         if option.trim().to_lowercase() == "q" {
+            println!("You ended the program!");
             break;
         } else if option.trim().to_lowercase() == "l" {
             list_entries();
@@ -39,18 +42,34 @@ fn create_journal() -> Result<()> {
         .read(true)
         .write(true)
         .create(true) // create file if it doesn't exist
-        .open("journal.log")?;
+        .open(JOURNAL_FILE)?;
     // println!("File opened/created successfuly.");
     Ok(())
 }
 
-fn list_entries() {
+fn list_entries() -> Result<()> {
     println!("You chose to list all of the entries");
+
+    let _file = OpenOptions::new()
+        .read(true)
+        .open(JOURNAL_FILE)?;
+
+    println!("");
+    println!("--- Contents of the Journal ---");
+    let contents = std::fs::read_to_string(JOURNAL_FILE)?;
+    println!("{}", contents);
+    println!("---   End of the Contents   ---");
+    println!("");
+    Ok(())
 }
 
 fn add_an_entry() {
+    println!("");
     println!("You chose to add an entry");
+    println!("");
 }
 fn delete_an_entry() {
+    println!("");
     println!("You chose to delete an entry");
+    println!("");
 }
