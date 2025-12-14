@@ -1,7 +1,12 @@
 use std::io;
 use std::io::Write;
+// use std::fs::File;
+use std::fs::OpenOptions;
+use std::io::Result; // Use io::Result for easier error handling in main
 
 fn main() {
+
+    let _ = create_journal();
 
     loop {
         println!("(l) list entries | (a) add an entry | (d) delete an entry | (q) to quit.");
@@ -26,6 +31,17 @@ fn main() {
             continue;
         }
     }
+}
+
+fn create_journal() -> Result<()> {
+
+    let _file = OpenOptions::new()
+        .read(true)
+        .write(true)
+        .create(true) // create file if it doesn't exist
+        .open("journal.log")?;
+    // println!("File opened/created successfuly.");
+    Ok(())
 }
 
 fn list_entries() {
