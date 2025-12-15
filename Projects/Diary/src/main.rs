@@ -1,8 +1,6 @@
-use std::io;
-use std::io::Write;
-// use std::fs::File;
+use std::cmp::Eq;
 use std::fs::OpenOptions;
-use std::io::Result; // Use io::Result for easier error handling in main
+use std::io::{self, Write, Result}; // Use io::Result for easier error handling in main
 
 const JOURNAL_FILE: &str = "journal.log";
 
@@ -26,7 +24,9 @@ fn main() {
         } else if option.trim().to_lowercase() == "l" {
             list_entries();
         } else if option.trim().to_lowercase() == "a" {
-            add_an_entry();
+            if let Err(e) = add_an_entry::<dyn Eq>() {
+                eprintln!("An error occurered: {}", e);
+            }
         } else if option.trim().to_lowercase() == "d" {
             delete_an_entry();
         } else {
@@ -63,11 +63,33 @@ fn list_entries() -> Result<()> {
     Ok(())
 }
 
-fn add_an_entry() {
+fn add_an_entry<Eq>() -> Result<()> {
+
+    let mut user_input = String::new();
+
     println!("");
-    println!("You chose to add an entry");
-    println!("");
+    print!("Please add your entry : ");
+
+    io::stdout().flush().expect("Failed to flush stdout");
+    io::stdin().read_line(&mut user_input)?;
+
+    let entry_to_write = user_input.trim();
+
+    if entry_to_write.is_empty() {
+        println!("Error: No entry added");
+        Ok::<(), dyn Eq>(());
+    }
+
+    let mut file = OpenOptions::new()
+        .append(true) // open in append mode
+        .create(true) // create file if it doesn't exist
+        .open(JOURNAL_FILE)?;
+
+    writeln!(&mut file, "{}", entry_to_write)?;
+    println!("Entry added successfully");
+    Ok(())
 }
+
 fn delete_an_entry() {
     println!("");
     println!("You chose to delete an entry");
