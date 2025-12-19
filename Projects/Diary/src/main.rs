@@ -1,5 +1,6 @@
-use std::fs::OpenOptions;
-use std::io::{self, Write, Result}; // Use io::Result for easier error handling in main
+use std::fs::{OpenOptions, File};
+use std::io::{self, Write, Result, BufRead, BufReader}; // Use io::Result for easier error handling in main
+use chrono::Local;
 
 const JOURNAL_FILE: &str = "journal.log";
 
@@ -67,24 +68,37 @@ fn add_an_entry() -> Result<()> {
     println!("");
     print!("Please add your entry : ");
     io::stdout().flush().expect("Failed to flush stdout");
-
     io::stdin().read_line(&mut user_input)?;
 
     let entry_to_write = user_input.trim();
-
     if entry_to_write.is_empty() {
         println!("Error: No entry added");
         return Ok(()); // Exit function immediately so nothing is written
     }
+
+    let timestamp = Local::now().format("%Y-%m-%d %H:%M:%S").to_string();
+    let id = get_next_id()?;
 
     let mut file = OpenOptions::new()
         .append(true) // open in append mode
         .create(true) // create file if it doesn't exist
         .open(JOURNAL_FILE)?;
 
-    writeln!(&mut file, "{}", entry_to_write)?;
-    println!("You successfully added '{}' to the {}", entry_to_write, JOURNAL_FILE);
+    writeln!(&mut file, "[{}] [{}] - {}", id, timestamp, entry_to_write)?;
+    println!("You successfully added entry no. {} to the {}", id, JOURNAL_FILE);
     Ok(())
+}
+
+// Helper function to calculate the next ID
+fn get_next_id() -> Result<usize> {
+    if !std::path::Path::new(JOURNAL_FILE).exists() {
+        return Ok(1);
+    }
+    let file = File::open(JOURNAL_FILE)?;
+    let reader = BufReader::new(file);
+    // counting lines as the ID (i.e. if 5 lines exist, next ID is 6)
+    let count = reader.lines().count();
+    Ok(count + 1)
 }
 
 fn delete_an_entry() {
