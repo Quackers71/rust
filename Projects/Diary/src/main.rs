@@ -1,4 +1,3 @@
-use std::cmp::Eq;
 use std::fs::OpenOptions;
 use std::io::{self, Write, Result}; // Use io::Result for easier error handling in main
 
@@ -22,9 +21,9 @@ fn main() {
             println!("You ended the program!");
             break;
         } else if option.trim().to_lowercase() == "l" {
-            list_entries();
+            let _ = list_entries();
         } else if option.trim().to_lowercase() == "a" {
-            if let Err(e) = add_an_entry::<dyn Eq>() {
+            if let Err(e) = add_an_entry() {
                 eprintln!("An error occurered: {}", e);
             }
         } else if option.trim().to_lowercase() == "d" {
@@ -48,8 +47,6 @@ fn create_journal() -> Result<()> {
 }
 
 fn list_entries() -> Result<()> {
-    println!("You chose to list all of the entries");
-
     let _file = OpenOptions::new()
         .read(true)
         .open(JOURNAL_FILE)?;
@@ -63,21 +60,21 @@ fn list_entries() -> Result<()> {
     Ok(())
 }
 
-fn add_an_entry<Eq>() -> Result<()> {
+fn add_an_entry() -> Result<()> {
 
     let mut user_input = String::new();
 
     println!("");
     print!("Please add your entry : ");
-
     io::stdout().flush().expect("Failed to flush stdout");
+
     io::stdin().read_line(&mut user_input)?;
 
     let entry_to_write = user_input.trim();
 
     if entry_to_write.is_empty() {
         println!("Error: No entry added");
-        Ok::<(), dyn Eq>(());
+        return Ok(()); // Exit function immediately so nothing is written
     }
 
     let mut file = OpenOptions::new()
@@ -86,7 +83,7 @@ fn add_an_entry<Eq>() -> Result<()> {
         .open(JOURNAL_FILE)?;
 
     writeln!(&mut file, "{}", entry_to_write)?;
-    println!("Entry added successfully");
+    println!("You successfully added '{}' to the {}", entry_to_write, JOURNAL_FILE);
     Ok(())
 }
 
