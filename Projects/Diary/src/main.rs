@@ -28,7 +28,9 @@ fn main() {
                 eprintln!("An error occurered: {}", e);
             }
         } else if option.trim().to_lowercase() == "d" {
-            delete_an_entry();
+            if let Err(e) = delete_an_entry_and_reindex() {
+                eprintln!("Error during deletion: {}", e);
+            }
         } else {
             println!("Invalid input");
             continue;
@@ -101,7 +103,7 @@ fn get_next_id() -> Result<usize> {
     Ok(count + 1)
 }
 
-fn delete_an_entry() -> Result<()> {
+fn delete_an_entry_and_reindex() -> Result<()> {
     let _ = list_entries();
 
     println!("\n--- Delete an entry ---");
@@ -109,32 +111,39 @@ fn delete_an_entry() -> Result<()> {
     io::stdout().flush().expect("Failed to flush stdout");
 
     let mut id_input = String::new();
-    io::stdin().read_line(&mut id_input)?;
-    let id_to_delete = format!("[{}]", id_input.trim()); // match ID input
+    io::stdin().read_line(&mut id_input)?;    
+    let id_to_delete_str = id_input.trim();
+    let id_tag = format!("[{}]", id_to_delete_str);
 
     let file = File::open(JOURNAL_FILE)?;
     let reader = BufReader::new(file);
-    let mut kept_lines = Vec::new();
+
+    let mut entries_to_keep = Vec::new();
     let mut found = false;
 
     for line in reader.lines() {
         let line = line?;
         // skip the line that with the targeted ID
-        if line.starts_with(&id_to_delete) {
+        if line.starts_with(&id_tag) {
             found = true;
             continue;
-        }
-        kept_lines.push(line);
+            }
+            // strip the old ID and the DateTS {entry}
+            if let Some(first_space) = line.find("] ") {
+                entries_to_keep.push(line[first_space + 2..].to_string());
+            } else {
+                entries_to_keep.push(line);
+            }
     }
     if !found {
-        println!("Entry with ID {} not found.", id_input.trim());
+        println!("Entry with ID {} not found.", id_to_delete_str);
         return Ok(());
     }
-    // overwrite the file with filtered lines
+    // overwrite file & re-assign IDs 1, 2, 3...
     let mut file = File::create(JOURNAL_FILE)?; // truncates the file automatically
-    for line in kept_lines {
-        writeln!(file, "{}", line)?;
+    for (i, content) in entries_to_keep.iter().enumerate() {
+        writeln!(file, "[{}] {}", i + 1, content)?;
     }
-    println!("Entry #{} deleted successfully.", id_input.trim());
+    println!("Entry #{} deleted successfully.", id_to_delete_str);
     Ok(())
 }
