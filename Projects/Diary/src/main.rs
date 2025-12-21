@@ -1,5 +1,5 @@
 use std::fs::{OpenOptions, File};
-use std::io::{self, Write, Result, BufRead, BufReader}; // Use io::Result for easier error handling in main
+use std::io::{self, Write, Result, BufRead, BufReader}; // Use io::Result for easier error handling
 use chrono::Local;
 
 const JOURNAL_FILE: &str = "journal.log";
@@ -45,7 +45,7 @@ fn create_journal() -> Result<()> {
         .write(true)
         .create(true) // create file if it doesn't exist
         .open(JOURNAL_FILE)?;
-    // println!("File opened/created successfuly.");
+    // println!("File opened or created successfully, if it didn't exist.");
     Ok(())
 }
 
@@ -57,7 +57,7 @@ fn list_entries() -> Result<()> {
     println!("");
     println!("--- Contents of the Journal ---");
     let contents = std::fs::read_to_string(JOURNAL_FILE)?;
-    println!("{}", contents);
+    print!("{}", contents);
     println!("---   End of the Contents   ---");
     println!("");
     Ok(())
@@ -88,6 +88,8 @@ fn add_an_entry() -> Result<()> {
 
     writeln!(&mut file, "[{}] [{}] {}", id, timestamp, entry_to_write)?;
     println!("You successfully added entry no. {} to the {}", id, JOURNAL_FILE);
+    println!("The List now looks like this.");
+    let _ = list_entries();
     Ok(())
 }
 
@@ -106,8 +108,8 @@ fn get_next_id() -> Result<usize> {
 fn delete_an_entry_and_reindex() -> Result<()> {
     let _ = list_entries();
 
-    println!("\n--- Delete an entry ---");
-    println!("Enter the ID of the entry to delete : ");
+    println!("--- Delete an entry ---");
+    print!("Enter the ID of the entry to delete : ");
     io::stdout().flush().expect("Failed to flush stdout");
 
     let mut id_input = String::new();
@@ -145,5 +147,7 @@ fn delete_an_entry_and_reindex() -> Result<()> {
         writeln!(file, "[{}] {}", i + 1, content)?;
     }
     println!("Entry #{} deleted successfully.", id_to_delete_str);
+    println!("The List has been re-ordered / re-indexed.");
+    let _ = list_entries();
     Ok(())
 }
