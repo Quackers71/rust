@@ -1,5 +1,9 @@
 # Rust
 
+### Learn Rust by Domain - Backend
+
+<img src="./images/rust_backend_learning_ideas.png" width="300"/><br/>
+
 ### How to learn Rust
 
 No Boilerplate > https://youtu.be/2hXNd6x9sZs?si=F7k9ERmgH-MRNq0h
