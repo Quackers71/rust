@@ -5,7 +5,7 @@
 
 To start the web app run :
 ```
-trunk serve
+% trunk serve
 2025-12-30T14:59:19.175638Z  INFO 🚀 Starting trunk 0.21.14
 2025-12-30T14:59:19.484929Z  INFO 📦 starting build
     Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.09s
