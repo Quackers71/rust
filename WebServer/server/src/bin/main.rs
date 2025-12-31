@@ -3,14 +3,19 @@ use std::io::prelude::*;
 use std::fs;
 use std::thread;
 use std::time::Duration;
+use server::ThreadPool;
 
 fn main() {
-    let listener = TcpListener::bind("0.0.0.0:7878").unwrap(); // making accessible to home network
+    let listener = TcpListener::bind("0.0.0.0:7878").unwrap(); 
+
+    let pool = ThreadPool::new(4);
 
     for stream in listener.incoming() {
         let stream = stream.unwrap();
 
-        handle_connection(stream);
+        pool.execute(|| {
+            handle_connection(stream);
+        });
     }
 }
 

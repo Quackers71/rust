@@ -163,4 +163,17 @@ Structs - used to create custom data types</br></br>
 Enums are types which have a few definite values</br></br>
 
 ### Command Line Args
-See the file "cli.rs"</br></br></br>
+See the file "cli.rs"</br></br>
+
+### VSCode plugins
+- https://youtu.be/BU1LYFkpJuk?si=NiS5vzf3-O4ZeW6Y
+```
+rust-analyzer
+CodeLLDB
+better TOML
+crates
+
+# optional
+Error Lens
+Todo Tree
+```
