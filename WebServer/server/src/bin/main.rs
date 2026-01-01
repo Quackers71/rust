@@ -6,7 +6,7 @@ use std::time::Duration;
 use server::ThreadPool;
 
 fn main() {
-    let listener = TcpListener::bind("0.0.0.0:7878").unwrap(); 
+    let listener = TcpListener::bind("0.0.0.0:8181").unwrap(); 
 
     let pool = ThreadPool::new(4);
 
@@ -23,26 +23,36 @@ fn handle_connection(mut stream: TcpStream) {
     let mut buffer = [0; 1024];
     stream.read(&mut buffer).unwrap();
 
-    let get = b"GET / HTTP/1.1\r\n";
-    let sleep = b"GET /sleep HTTP/1.1\r\n";
+    let request = String::from_utf8_lossy(&buffer);
 
-    let (status_line, filename) =
-        if buffer.starts_with(get) {
-            ("HTTP/1.1 200 OK", "index.html")
-        } else if buffer.starts_with(sleep) {
-            thread::sleep(Duration::from_secs(5));
-            ("HTTP/1.1 200 OK", "sleep.html")
-        } else {
-            ( "HTTP/1.1 404 NOT FOUND", "404.html")
-        };
+    // 1. Precise Routing & Correct Content-Types
+    let (status_line, filename, content_type) = if request.starts_with("GET / HTTP/1.1") {
+        ("HTTP/1.1 200 OK", "index.html", "text/html")
+    } else if request.starts_with("GET /style.css HTTP/1.1") {
+        ("HTTP/1.1 200 OK", "style.css", "text/css")
+    } else if request.starts_with("GET /images/rusty.png HTTP/1.1") {
+        ("HTTP/1.1 200 OK", "images/rusty.png", "image/png")
+    } else if request.starts_with("GET /sleep HTTP/1.1") {
+        thread::sleep(Duration::from_secs(5));
+        ("HTTP/1.1 200 OK", "sleep.html", "text/html")
+    } else if request.starts_with("GET /images/dexter-2025.jpeg HTTP/1.1") {
+        ("HTTP/1.1 200 OK", "images/dexter-2025.jpeg", "image/jpeg")
+    } else {
+        ("HTTP/1.1 404 NOT FOUND", "404.html", "text/html")
+    };
 
-    let contents = fs::read_to_string(filename).unwrap();
-    let response = format!(
-        "{}\r\nContent-Length: {}\r\n\r\n{}",
-        status_line,
-        contents.len(), 
-        contents
+    // 2. Use fs::read for binary compatibility (images + html)
+    let contents = fs::read(filename).unwrap_or_else(|_| {
+        b"404 Not Found".to_vec()
+    });
+
+    // 3. Construct response with raw bytes
+    let response_header = format!(
+        "{}\r\nContent-Type: {}\r\nContent-Length: {}\r\n\r\n",
+        status_line, content_type, contents.len()
     );
-    stream.write(response.as_bytes()).unwrap();
+
+    stream.write_all(response_header.as_bytes()).unwrap();
+    stream.write_all(&contents).unwrap(); // Send raw binary data
     stream.flush().unwrap();
 }

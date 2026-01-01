@@ -1,25 +1,14 @@
 body {
-    background-color:black;
-}
-
-div {
-    margin-top:35px;
-    text-align:center;
-    color:white;
-    font-family:Cubano;
-}
-
-p {
-    font-size:15em;
-}
-
-button {
-    width:50%;
-    height:500px;
-    font-size:18em;
-    font-family:Cubano;
-    color:white;
-    text-align:center;
-    background-color:#555555;
-    border-width:8px;
-}
+    background-color: #333333; /* Dark Grey */
+    color: white;              /* White Text */
+    font-family: sans-serif;
+    text-align: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 50;
+  }
+  img {
+  width: 600px;       /* Prevents image from overflowing small screens */
+  height: auto;         /* Maintains aspect ratio */
+  border-radius: 8px;   /* Optional: rounds the corners slightly */
+  }
