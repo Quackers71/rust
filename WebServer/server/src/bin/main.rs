@@ -10,9 +10,8 @@ fn main() {
 
     let pool = ThreadPool::new(4);
 
-    for stream in listener.incoming() {
+    for stream in listener.incoming() { //.take(10) { this will close threads after 10 requests
         let stream = stream.unwrap();
-
         pool.execute(|| {
             handle_connection(stream);
         });
