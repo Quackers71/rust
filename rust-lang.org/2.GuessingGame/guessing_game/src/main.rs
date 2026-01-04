@@ -51,7 +51,7 @@ fn main() {
 
                     if count >= MAX_ATTEMPTS {
                         println!("{} {}", "GAME OVER: ".on_red().bold(),format!("You've used all {MAX_ATTEMPTS} attempts.").red());
-                        println!("{}",format!("The secret number was : {secret_number}").blue());
+                        println!("{}",format!("The secret number was : {secret_number}").blue().bold());
                         break;
                     }
                     continue;
@@ -65,11 +65,11 @@ fn main() {
             Ordering::Greater => println!("{}", "Too high!".red()),
             Ordering::Equal => {
                 if count == 1 {
-                    println!("{}",format!("What! You got the secret number in {count} guess...").on_green());
+                    println!("{}",format!("What! You got the secret number in {count} guess...").green().bold());
                     println!("{}","Please go and buy a lottery ticket today!".yellow());
                 } else {
-                    println!("{} {}", "You win! the number was ".green().bold(),format!("{secret_number}").on_green());
-                    println!("{}",format!("It took you {count} legitimate guesses").blue());
+                    println!("{} {}", "You win! the number was ".green().bold(),format!("{secret_number}").green().bold());
+                    println!("{}",format!("It took you {count} legitimate guesses").blue().bold());
                 }
                 break; // breaks loop & ends program...
             }
@@ -77,7 +77,7 @@ fn main() {
 
         if count >= MAX_ATTEMPTS {
             println!("{} {}", "GAME OVER: ".on_red().bold(),format!("You've used all {MAX_ATTEMPTS} attempts.").red());
-            println!("{}",format!("The secret number was : {secret_number}").blue());
+            println!("{}",format!("The secret number was : {secret_number}").blue().bold());
             break;
         }
     }

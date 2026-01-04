@@ -89,8 +89,10 @@ https://github.com/Quackers71/rust/blob/main/rust-lang.org/guessing_game/src/mai
 
 ```
 ./target/release/guessing_game
+or
+cargo run
 ```
-<img src="./images/guessing_game.png" width="700"/><br/>
+<img src="./images/guessing_game_updated.png" width="700"/><br/>
 
 ## 3. Common Programming Concepts
 
