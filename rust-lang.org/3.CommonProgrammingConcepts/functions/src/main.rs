@@ -21,6 +21,9 @@ fn main() {
 
     let z = plus_one(5);
     println!("The value of z is: {z}");
+
+    let new_sum: i32 = add_function(101, 22);
+    println!("The total is : {}", new_sum);
 }
 
 fn another_function(x: i32) {
@@ -33,4 +36,10 @@ fn print_labeled_measurements(value: i32, unit_label: char) {
 
 fn plus_one(x: i32) -> i32 {
     x + 1
+}
+
+fn add_function(f: i32, g: i32) -> i32 {
+    println!("The value of f is: {}", f);
+    println!("The value of g is: {}", g);
+    f + g
 }
