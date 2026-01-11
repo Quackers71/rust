@@ -1,13 +1,23 @@
 fn main() {
 
-    let s1 = String::from("Hello");
-    let (s2, len) = calculate_length(s1);
-    println!("The length of {} is {} characters.", s2, len);
+    /* This is now passing a reference to a string */
+    /* taken from https://doc.rust-lang.org/book/ch04-02-references-and-borrowing.html */
+
+    let mut s1 = String::from("Hello");
+    let len = calculate_length(&s1); // required &
+    println!("The length of {} is {} characters.", s1, len);
+
+    change(&mut s1);
+    println!("{}", s1);
 }
 
-fn calculate_length(s: String) -> (String, usize) {
+fn calculate_length(s: &String) -> usize { // again required &
     let length = s.len(); // returns the length of the string
-    (s, length)
+    length
+}
+
+fn change(some_string: &mut String) {
+    some_string.push_str(", World!");
 }
 
     /* Previous Stuff - The String Type */
