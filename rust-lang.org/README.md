@@ -196,19 +196,17 @@ To practice with the concepts discussed in this chapter, try building programs t
 
 ## 4. Understanding Ownership
 
-### Ownership Rules
-
-- Each value in Rust has a variable that's called its owner.
-- There can only be one owner at a time.
-- When the owner goes out of scope, the value will be dropped.
-
-### Ownership
-
 Ownership is a set of rules that govern how a Rust program manages memory. All programs have to manage the way they<br/>
 use a computer’s memory while running. Some languages have garbage collection that regularly looks for no-longer-used<br/> memory as the program runs; in other languages, the programmer must explicitly allocate and free the memory. Rust uses<br/>
 a third approach: memory is managed through a system of ownership with a set of rules that the compiler checks. If any<br/>
 of the rules are violated, the program won’t compile. None of the features of ownership will slow down your program<br/>
 while it’s running.<br/>
+
+### Ownership Rules
+
+- Each value in Rust has a variable that's called its owner.
+- There can only be one owner at a time.
+- When the owner goes out of scope, the value will be dropped.
 
 ### The Stack and the Heap
 
